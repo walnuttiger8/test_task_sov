@@ -48,7 +48,7 @@ class AddressService(Address):
         if self.dest_id:
             return
         if self.n_tries > 3:  # если более 3-х попыток, удаление из поиска
-            Address.query.delete(address)
+            Address.query.delete(self)
             Address.query.save()
         info = self.get_info()
         if not info:  # Если результат не найден, вернуть в поиск
@@ -67,10 +67,22 @@ class AddressService(Address):
             return
 
         dest_id = DestAddress.query.insert(**info)
+        print(info)
         DestAddress.query.save()
         self.dest_id = dest_id
         Address.query.update(self)
         Address.query.save()
+
+
+def analysis():
+    objects = list(map(Address, Address.query.all()))
+    print("Общее кол-во объектов", len(objects))
+    print("Кол-во найденных и ненайденных объектов:")
+    print(Address.query.count_found_not_found())
+    print("Кол-во объектов для Материал несущих стен = Кирпич по каждому региону:")
+    print(*Address.query.count_wall_material("Кирпич"), sep="\n")
+    print("Максимальное кол-во этажей для каждого Материал несущих стен в каждом городе:")
+    print(*Address.query.n_floors_for_wall_material_in_each_city(), sep="\n")
 
 
 if __name__ == "__main__":
@@ -78,3 +90,5 @@ if __name__ == "__main__":
     for address_query in Address.query.all():
         address = AddressService(parser, address_query)
         address.process()
+
+    analysis()

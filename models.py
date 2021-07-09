@@ -102,11 +102,13 @@ class DestAddressQuery:
         cadastral_number = kwargs.get("cadastral_number") or ""
         overlap_type = kwargs.get("overlap_type") or ""
         wall_material = kwargs.get("wall_material") or ""
-        self.cursor.execute(f"""
+        command = f"""
         INSERT INTO {DestAddressQuery.table_name} (year, n_floors, last_changed, building_type, house_type, emergency,
         cadastral_number, overlap_type, wall_material) VALUES ('{year}', '{n_floors}', '{last_changed}', '{building_type}', '{house_type}',
          '{emergency}', '{cadastral_number}', '{overlap_type}', '{wall_material}')
-        """)
+        """
+        print(command)
+        self.cursor.execute(command)
         return self.cursor.execute(f"SELECT last_insert_rowid()").fetchone()[0]
 
     def all(self):
@@ -118,12 +120,12 @@ class DestAddressQuery:
     def get(self, id):
         if not id:
             return ()
-        return self.cursor.execute(f"""SELECT * FROM {SourceAddressQuery.table_name} WHERE id={id}""").fetchone()
+        return self.cursor.execute(f"""SELECT * FROM {DestAddressQuery.table_name} WHERE id={id}""").fetchone()
 
 
 class DestAddress:
     query = DestAddressQuery()
-    _fields = ["year", "n_floors", "last_changed", "building_type", "house_type", "emergency", "cadastral_number",
+    _fields = ["id", "year", "n_floors", "last_changed", "building_type", "house_type", "emergency", "cadastral_number",
                "overlap_type", "wall_material"]
     __slots__ = _fields
 
@@ -206,6 +208,36 @@ class AddressQuery:
         WHERE id = {address.id}
         """
 
+    def count_found_not_found(self):
+        found = self.cursor.execute(f"""
+        SELECT COUNT(*) FROM {AddressQuery.table_name}
+        WHERE dest_id != ''
+        """).fetchone()[0]
+        not_found = len(self.all()) - found
+        return found, not_found
+
+    def count_wall_material(self, wall_material):
+        command = f"""
+        SELECT region, COUNT(*) FROM {AddressQuery.table_name}
+        INNER JOIN {DestAddressQuery.table_name} 
+        ON {AddressQuery.table_name}.dest_id = {DestAddressQuery.table_name}.id
+        INNER JOIN {SourceAddressQuery.table_name}
+        ON source_id = {SourceAddressQuery.table_name}.id
+        WHERE {DestAddressQuery.table_name}.wall_material = '{wall_material}'
+        GROUP BY {SourceAddressQuery.table_name}.region
+        """
+        return self.cursor.execute(command).fetchall()
+
+    def n_floors_for_wall_material_in_each_city(self):
+        command = f"""
+        SELECT {SourceAddressQuery.table_name}.city, {DestAddressQuery.table_name}.wall_material, MAX({DestAddressQuery.table_name}.n_floors)
+        FROM {AddressQuery.table_name}
+        INNER JOIN {SourceAddressQuery.table_name} ON source_id = {SourceAddressQuery.table_name}.id
+        INNER JOIN {DestAddressQuery.table_name} ON dest_id = {DestAddressQuery.table_name}.id
+        GROUP BY city, wall_material
+        """
+        return self.cursor.execute(command).fetchall()
+
 
 class Address:
     query = AddressQuery()
@@ -250,5 +282,5 @@ def drop_all():
 
 
 if __name__ == "__main__":
+    # drop_all()
     fill_db()
-

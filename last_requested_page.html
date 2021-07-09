@@ -1,55 +1,2523 @@
-<!DOCTYPE html><head>
-    <meta name="charset" content="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8">    <link href="/images/favicon.ico" rel="shortcut icon" type="image/x-icon">
-    <script type="text/javascript" src="//cdn.ravenjs.com/3.8.0/raven.min.js"></script>
-<script type="text/javascript">
-    //<!--
-    Raven.config('http://d11c780c612845c5a069fba7b148d064@sentry.bars-open.ru/169').install()
-    //-->
-</script>    <link href="/images/favicon.ico" rel="shortcut icon" type="image/x-icon">    
-    <title>Реформа ЖКХ</title>    <style>
-        html, body {
-            height: 100%;
-        }
+<!doctype html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta http-equiv="X-UA-Compatible" content="IE=11"/>
+    <meta charset="utf-8">
+    <title>Мой дом | Реформа ЖКХ</title>
+    <meta name="viewport" content="width=1060, initial-scale=1, shrink-to-fit=no">
+    <link href="/images/favicon.ico" rel="icon">
+    <link rel="shortcut icon" href="/images/favicon.png" type="image/png">
+    <link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon">
+    <link href="/images/favicon-144x144.png" rel="apple-touch-icon-precomposed" sizes="144x144"/>
+    <link href="/images/favicon-114x114.png" rel="apple-touch-icon-precomposed" sizes="114x114"/>
+    <link href="/images/favicon-72x72.png" rel="apple-touch-icon-precomposed" sizes="72x72"/>
+    <link href="/images/favicon-57x57.png" rel="apple-touch-icon-precomposed"/>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700&display=swap" rel="stylesheet">
 
-        html {
-            display: table;
-            margin: auto;
-        }
+        
 
-        body {
-            display: table-cell;
-            vertical-align: middle;
-        }
-
-    </style>
-
-</head>
+                                    <link rel="stylesheet" type="text/css" href="/assets/vendor.ca5556.css">
+                                                <link rel="stylesheet" type="text/css" href="/assets/common.1f80a1.css">
+                                        
+            <link rel="stylesheet" type="text/css" href="/css/common-new.css">
+    
+                        <script type="text/javascript" src="/assets/vendor.ca5556.js"></script>
+                                <script type="text/javascript" src="/assets/common.1f80a1.js"></script>
+                                <script type="text/javascript" src="/assets/app.fd17d5.js"></script>
+            
+                        </head>
 <body>
+            <header class="position-fixed w-100 background-white no_print">
+        <div class="container">
+            <div class="header transition ">
+                <div class="row d-flex align-items-center position-relative transition mx-0 flex-nowrap">
+                    <a href="/" class="d-flex align-items-center flex-shrink-0 a-no-underline">
+                        <span class="logo-wrapper">
+                            <svg class="logo transition" viewBox="0 0 69 41" fill="none"
+                                 xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                      d="M29 29H34V24H29V29ZM29 22H34V17H29V22ZM35 29H40V24H35V29ZM35 22H40V17H35V22ZM58.9991 9.02209C59.0393 7.36711 57.7336 6.02452 56.0625 6.00029C54.4279 5.97734 53.0293 7.31356 53.0004 8.92264C52.9716 10.5011 54.3777 11.961 55.9621 11.9993C57.5628 12.0362 58.9589 10.6669 58.9991 9.02209ZM13.0956 11.9989C14.7279 11.9518 16.0302 10.5596 15.9995 8.89096C15.9688 7.15103 14.7138 5.9639 12.9472 6.00084C11.251 6.03523 9.95514 7.37648 10.0012 9.04508C10.046 10.6615 11.4953 12.0447 13.0956 11.9989ZM12.9796 27.6963C12.9796 24.0922 13.0504 20.4868 12.9283 16.8878C12.9002 16.0364 12.4373 14.9384 11.8133 14.4159C9.06661 12.1123 6.17585 9.9921 3.36081 7.77196C2.33739 6.96487 1.33838 6.53223 0.416321 7.796C-0.549707 9.11923 0.343045 9.97313 1.29198 10.722C3.55378 12.5057 5.78993 14.3337 8.12623 16.0074C9.19728 16.7765 9.52336 17.6355 9.51115 18.9372C9.45375 25.2257 9.48306 31.5167 9.48673 37.8065C9.48795 39.2385 9.23026 41.0374 11.2808 40.9994C13.3484 40.9615 12.96 39.1082 12.9698 37.7217C12.9967 34.3807 12.9783 31.0385 12.9796 27.6963ZM56.0326 27.5965C56.0326 31.3327 56.0277 35.0676 56.0362 38.8038C56.0398 40.0795 56.6031 41.206 57.8533 40.968C58.5377 40.8389 59.1022 39.6707 59.5807 38.8797C59.7794 38.5519 59.617 37.9836 59.617 37.5255C59.6183 31.5618 59.6885 25.5968 59.5759 19.6344C59.5419 17.8119 59.9756 16.5968 61.4717 15.5704C63.6146 14.0985 65.6049 12.3861 67.6558 10.7686C68.5983 10.0269 69.5419 9.2017 68.6285 7.86013C67.6873 6.47805 66.6225 6.98304 65.5613 7.83102C62.8745 9.97754 60.0968 12.0064 57.502 14.2655C56.7558 14.9148 56.1476 16.1691 56.098 17.179C55.9272 20.6431 56.0313 24.1223 56.0326 27.5965ZM53.9701 18.2811C54.1544 13.5464 53.531 12.0244 50.8812 9.63709C46.1758 5.39684 40.6032 2.7726 35.0124 0.210167C34.4873 -0.0306247 33.6869 -0.0885692 33.1957 0.163811C27.2096 3.24517 21.2357 6.36 16.2525 11.1861C14.3788 13.003 13.7385 15.2332 14.0938 17.8729C15.1756 25.9233 18.2802 33.1728 21.9912 40.1584C22.2932 40.7288 23.6539 41.1524 24.2942 40.9245C25.3917 40.5318 25.5542 39.3948 24.9163 38.2668C24.6253 37.7543 24.367 37.2186 24.1111 36.6856C21.2914 30.801 18.7714 24.8211 17.6811 18.2309C17.2954 15.9002 17.8533 14.2147 19.5669 13.0635C24.0601 10.0453 28.6346 7.16221 33.2018 4.27143C33.5778 4.03321 34.2314 3.94437 34.6183 4.12335C39.7931 6.51967 44.9727 8.91342 49.2052 13.0622C50.3779 14.2108 50.8557 15.5371 50.5792 17.1737C50.2688 19.0073 50.1754 20.9388 49.5435 22.6424C47.625 27.8239 45.5172 32.9282 43.4252 38.0363C42.9462 39.2055 42.6673 40.3953 43.9091 40.9219C44.5191 41.1808 45.9065 40.7597 46.2279 40.1918C50.2906 32.9939 53.3297 25.3787 53.9701 18.2811Z"
+                                      fill="#295C83"/>
+                            </svg>
+                        </span>
+                        <span class="din-text logo scroll-hide">Реформа ЖКХ</span>
+                    </a>
+                    <span class="ml-4 f-12 text-marengo fw-600 col-auto scroll-hide px-0 flex-shrink-0">Государственная корпорация — Фонд содействия <br>реформированию жилищно-коммунального хозяйства</span>
+                    <a href="tel:8 800 700 89 89"
+                       class="f-16 phone-fill text-marengo font-weight-bold align-items-center ml-4 pl-2 scroll-hide text-decoration-none flex-shrink-0">8
+                        800 700 89 89</a>
+                    <div class="flex-grow-1 text-align-right">
+                                                    <a href="#"
+                               class="f-14 button-login text-brilliant-blue fw-600 py-2 px-3 text-decoration-none float-right"
+                               data-toggle="modal" data-target="#login-popup">Личный кабинет</a>
+                                            </div>
+                </div>
+            </div>
+            <div class="row position-relative">
+                <nav class="col-12 top-menu d-flex flex-row justify-content-between text-uppercase transition">
+                                                                                        <li class="d-flex align-items-center  ">
+                            <a href="/relocation-about"
+                               class="fw-600 f-14 lh-22 d-block text-center m-auto text-black ">Расселение аварийного жилья</a>
+                        </li>
+                                                                    <li class="d-flex align-items-center  ">
+                            <a href="https://exp.reformagkh.ru"
+                               class="fw-600 f-14 lh-22 d-block text-center m-auto text-black ">Модернизация жилья</a>
+                        </li>
+                                                                    <li class="d-flex align-items-center  ">
+                            <a href="/overhaul"
+                               class="fw-600 f-14 lh-22 d-block text-center m-auto text-black ">Капитальный ремонт МКД</a>
+                        </li>
+                                                                    <li class="d-flex align-items-center  active">
+                            <a href="/myhouse?tid=2208161"
+                               class="fw-600 f-14 lh-22 d-block text-center m-auto text-black active">Жилищный фонд</a>
+                        </li>
+                                                                    <li class="d-flex align-items-center  ">
+                            <a href="/communal-infrastructure"
+                               class="fw-600 f-14 lh-22 d-block text-center m-auto text-black ">Коммунальная инфраструктура</a>
+                        </li>
+                                    </nav>
 
-<form method="post" name="request_limiter_captcha" action="&#x2F;captcha-form" id="request_limiter_captcha"><input type="hidden" name="redirectTo" value=""><input type="hidden" name="csrf" value="d2997221ec59c906f4554bafdca570e9-23874b0ac2ef85342204b332a3c1dd0b"><span>В целях безопасности введите код с картинки</span>
-<table>
-    <tr>
+                                
+                <div class="dropdown position-static dropdown-hover">
+                    <a href="/myhouse?geo=reset" role="button" id="dropdownhover"
+                       data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
+                       class="text-dark-grey  select-region col-5 position-absolute text-right text-space f-12 lh-22 justify-content-end align-items-center transition pr-0">Российская Федерация</a>
+                    <div class="dropdown-menu list-inline dropdown-menu-right border-0"
+                         aria-labelledby="dropdownhover" style="box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.14363);">
+                                                    <div class="arrow" style="margin-top: -1.5rem;right: 0.5rem;"></div>
+                                                            <a target="_top"
+                                   href="/myhouse?geo=reset"
+                                   class="list-inline-item text-dark-grey text-decoration-underline">Российская
+                                    Федерация</a>
+                                                                                                                                                                </div>
+                </div>
+            </div>
+        </div>
+    </header>
+        <section id="first-section">
+    <div class="header-section position-relative ">
+        <div class="position-absolute w-100 h-100">
+            <img src="/img/icons/house_profile_bg.jpg" class="img-fluid w-100 h-100">
+            <div class="position-absolute overlay"></div>
+        </div>
+        <div class="container">
+            <nav aria-label="breadcrumb" class="mb-5">
+                <ol class="breadcrumb pl-0 pt-40">
+                    <li class="breadcrumb-item "><a class="text-white" href="/">Главная</a></li>
+                    <li class="breadcrumb-item active text-white" aria-current="page">Жилищный фонд</li>
+                </ol>
+            </nav>
+
+            <form action="/search/houses" class="search row" id="houses-search-autocomplete-form">
+                <div class="col-10">
+                    <input name="query" type="text" class="col-12 py-3"
+                           placeholder="Пример поиска дома: Нижегородская область Нижний Новгород Мира 12">
+                </div>
+                <div class="col-2">
+                    <input type="submit" class="col-12 p-0 btn btn-yellow f-18 fw-600" value="Найти">
+                </div>
+            </form>
+            <div class="folder-description">
+                <h2 class="text-white">г. Санкт-Петербург, ул. Стойкости, д. 7</h2>
+            </div>
+        </div>
+    </div>
+</section>    <section class="p-5">
+
+    <div class="container">
+        <div class="row align-items-top justify-content-between">
+            <div class="col-2 text-center mt-3">
+                                <div class="house-images-wrapper">
+                        <div class="jcarousel-wrapper">
+                            <div data-jcarousel="true" data-wrap="circular" class="jcarousel">
+                                <ul>                                    <li>
+                                        <div class="jcarousel-zoomable-img"></div>
+                                    </li>
+                                </ul>
+                            </div>
+                                                    </div>
+                </div>
+                <a href="#" class="f-11 lh-15 text-dark-blue d-block mt-3 fw-600 text-decoration-underline"
+                   data-toggle="modal" data-target="#address-changes-popup" style="position: relative;left: 20px;">История изменения адреса</a>
+            </div>
+            <div class="col-8 px-0 row justify-content-around">
+                                    <div class="col-6 house-specification my-3 d-flex flex-column justify-content-between">
+                        <div class="ml-1">
+                                                            <div class="house-specs d-flex fw-600 f-14 lh-19 align-items-start mb-3">
+                                    <div class="mr-5 flex-shrink-0">Общая площадь, кв.м</div>
+                                    <div>18 658,09</div>
+                                </div>
+                                                            <div class="house-specs d-flex fw-600 f-14 lh-19 align-items-start mb-3">
+                                    <div class="mr-5 flex-shrink-0">Общая площадь жилых помещений, кв.м</div>
+                                    <div>16 216,09</div>
+                                </div>
+                                                            <div class="house-specs d-flex fw-600 f-14 lh-19 align-items-start mb-3">
+                                    <div class="mr-5 flex-shrink-0">Количество этажей, ед.</div>
+                                    <div>9</div>
+                                </div>
+                                                    </div>
+                    </div>
+                                    <div class="col-6 house-specification my-3 d-flex flex-column justify-content-between">
+                        <div class="ml-1">
+                                                            <div class="house-specs d-flex fw-600 f-14 lh-19 align-items-start mb-3">
+                                    <div class="mr-5 flex-shrink-0">Год ввода дома в эксплуатацию</div>
+                                    <div>1969</div>
+                                </div>
+                                                            <div class="house-specs d-flex fw-600 f-14 lh-19 align-items-start mb-3">
+                                    <div class="mr-5 flex-shrink-0">Количество подъездов, ед.</div>
+                                    <div>9</div>
+                                </div>
+                                                            <div class="house-specs d-flex fw-600 f-14 lh-19 align-items-start mb-3">
+                                    <div class="mr-5 flex-shrink-0">Количество лифтов, ед.</div>
+                                    <div>9</div>
+                                </div>
+                                                    </div>
+                    </div>
+                                            </div>
+            <div class="col-1 house-specification mt-3 mb-5 d-flex flex-column justify-content-between">
+                <div class="ml-1">
+                    <a href="#post_report_form" data-toggle="modal" class="house-print position-absolute"><img src="/img/icons/ico_print.svg" class="" alt=""></a>
+                </div>
+                                    <a href="#" style="right: -35px; top: -16px; position: absolute !important;" title="Добавить дом в избранное" data-favorite-house-id="6921359" data-is-favorite="" data-user-id="" data-progress="0">
+                        <img src="/images/stars/star_off.svg" height="40">
+                    </a>
+                            </div>
+                    </div>
+    </div>
+        <div class="container mt-5">
+        <div class="alert alert-primary bg-light px-5 py-4">
+            <div class="f-14 lh-19 mb-3">
+                <span class="fw-600">
+                    На сайте "Реформа ЖКХ"
+                    зарегистрирован
+                    1 период
+                    управления домом:
+                </span>
+                <span class="date">
+                    01 Июня 2007 г. - Настоящее время
+                </span>
+            </div>
+            <div class="f-14 lh-19">
+                <span class="fw-600">Управляющая организация:</span>
+                <span class="address">
+                    <a href="/mymanager/profile/6742607">ОАО &quot;Сити Сервис&quot;</a>
+                </span>
+            </div>
+        </div>
+    </div>
+    </section>
+        <script src="//api-maps.yandex.ru/2.1/?lang=ru_RU&apikey=c18c468-bb9c-4c44-aba8-76e3c87febba" type="text/javascript"></script>
+
+
+<script type="text/javascript">
+    window.onload = function () {
+        var mapConfig = {
+            center: [59.828419,30.216523],
+            zoom: 14
+        };
+
+        ymaps.ready(function () {
+            var rgkhMap = new ymaps.Map('map', mapConfig),
+                balloonContentBody = "\u0433. \u0421\u0430\u043d\u043a\u0442-\u041f\u0435\u0442\u0435\u0440\u0431\u0443\u0440\u0433, \u0443\u043b. \u0421\u0442\u043e\u0439\u043a\u043e\u0441\u0442\u0438",
+                balloonContentHeader = "\u0443\u043b. \u0421\u0442\u043e\u0439\u043a\u043e\u0441\u0442\u0438, \u0434. 7",
+                balloonContent = '<h3>' + balloonContentHeader + '</h3><p>' + balloonContentBody + '</p>';
+
+            rgkhMap.controls.remove('mapTools')
+                    .remove('geolocationControl')
+                    .remove('searchControl')
+                    .remove('trafficControl')
+                    .remove('rulerControl');
+
+                            var myPlacemark = new ymaps.Placemark(
+                    [59.828419,30.216523],
+                    {balloonContent: balloonContent}
+                );
+                rgkhMap.geoObjects.add(myPlacemark);
+                    });
+    }
+</script>
+    <section class="mb-5" id="houseprofile-cards">
+        <div class="container">
+            <div class="row">
+                <div class="col-6 pr-3">
+                    <div class="background-mail background-blue rounded overflow-hidden">
+                        <h3 class="text-white">
+                            Обращения граждан<br>
+                            по вопросам переселения<br>
+                            и капитального ремонта
+                        </h3>
+                        <div class="text">
+                            <p class="text-white">Вы можете подать обращение по вопросам реализации региональных
+                                адресных программ по переселению граждан из аварийного жилищного фонда и реализации
+                                региональных программ капитального ремонта</p>
+                        </div>
+                        <a href="/user/handling" name="content"
+                           class="text-light-blue background-white create-order d-inline-block p-2 px-4">
+                            Подать обращение
+                        </a>
+                    </div>
+                </div>
+                <div class="col-6 pl-3">
+                    <div class="d-flex flex-column background-blue rounded overflow-hidden">
+                        <h3 class="text-white">
+                            Домовая книга
+                        </h3>
+                        <ul class="house-register flex-grow-1">
+                                                            <div class="text-white">По данному дому не добавлено ни одного сообщения в домовую
+                                    книгу
+                                </div>
+                                                    </ul>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <a href="/myhouse/profile/add-house-message/6921359/"
+                               class="text-light-blue add-house-message-btn background-white create-order d-inline-block p-2 px-4">
+                                Добавить сообщение
+                            </a>
+                            <a href="/homebook" class="link-all  f-14 lh-20 fw-300 text-white my-2 d-inline-block">Посмотреть
+                                все</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+        <section class="background-white shadow-tabs">
+        <div class="container d-flex justify-content-center" id="house-card-menu-container">
+            
+            
+            
+                <a href="/myhouse/profile/passport/6921359#content"
+                   class="tab-title text-uppercase f-14 lh-22 fw-600 text-black text-align-center active__link_with_span"
+                   data-block="#ajaxData"><span>Паспорт</span></a>
+
+                                    <a href="/myhouse/profile/view/6921359#content"
+                       class="tab-title text-uppercase f-14 lh-22 fw-600 text-black text-align-center"
+                       data-block="#ajaxData"><span>Жилищный фонд</span></a>
+                
+                                                
+                
+                                </div>
+    </section>
+    <section class="mt-5">
+        <div id="container"></div>
+        <div class="container" id="ajaxData">
+            <div class="row">
+                    <div class="col-3 p-0">
+        <div class="accordion border-right-grey pr-3" id="accordionExample">
+                <div class="card">
+        <div class="card-header p-0  tab-content" id="headingOne">
+            <a href="#list-common-passport"
+                class="ajax-data btn btn-link f-18 fw-600 w-100 h-100 text-left p-4 rounded d-flex align-items-center justify-content-between active house-passport-tab"
+                aria-controls="constructive" role="tab" data-toggle="tab" id="common-tab">
+                Общие сведения
+            </a>
+        </div>
+    </div>
+    <div class="card">
+        <div class="card-header p-0  tab-content" id="headingTwo">
+            <a href="#list-constructive"
+                class="ajax-data btn btn-link f-18 fw-600 w-100 h-100 text-left p-4 rounded d-flex align-items-center justify-content-between house-passport-tab"
+                aria-controls="common" role="tab" data-toggle="tab" id="constructive-tab">
+                Конструктивные элементы дома
+            </a>
+        </div>
+    </div>
+
+            <div class="card">
+            <div class="card-header p-0  tab-content" id="headingThree">
+                <a href="#my-home-lifts"
+                    class="ajax-data btn btn-link f-18 fw-600 w-100 h-100 text-left p-4 rounded d-flex align-items-center justify-content-between house-passport-tab"
+                    aria-controls="lifts" role="tab" data-toggle="tab" id="lifts-tab">
+                    Лифты
+                </a>
+            </div>
+        </div>
+        <div class="card">
+        <div class="card-header p-0  tab-content" id="headingFour">
+            <a href="#list-engineering-systems"
+                class="ajax-data btn btn-link f-18 fw-600 w-100 h-100 text-left p-4 rounded d-flex align-items-center justify-content-between house-passport-tab"
+                aria-controls="engineering" role="tab" data-toggle="tab" id="engineering-tab">
+                Инженерные системы
+            </a>
+        </div>
+    </div>
+
+            <div class="card">
+            <div class="card-header p-0  tab-content" id="headingFive">
+                <a href="#list-devices"
+                   class="ajax-data btn btn-link f-18 fw-600 w-100 h-100 text-left p-4 rounded d-flex align-items-center justify-content-between house-passport-tab"
+                   aria-controls="devices" role="tab" data-toggle="tab" id="devices-tab">
+                    Приборы учета
+                </a>
+            </div>
+        </div>
+    
+        </div>
+    </div>
+    <div class="col-9 tab-content">
+            <div class="tab-content fade tab-pane show active" role="tabpanel" aria-labelledby="common-tab" id="list-common-passport">
+        <table id="profile-house-style" class="w-100 simple-table">
+    <tr class="border-bottom-grey font-weight-bold">
         <td>
-            <img width="160" height="80"
-                 src="/captcha/3ee33e8f5bb8ee6caa779b78428df23f.png"
-                 alt="">
+            По данным Фонда ЖКХ информация последний раз актуализировалась:
         </td>
+        <td>08.07.2021</td>
     </tr>
-    <tr>
-        <td>
-            <input type="text" name="captcha[input]" id="captchaInput"/>
-            <input type="hidden" value="3ee33e8f5bb8ee6caa779b78428df23f" name="captcha[id]"/>
-                    </td>
+            <tr class="border-bottom-grey">
+            <td>Адрес дома:
+                <i class="ico help position-relative tooltip-subject-parent">
+
+            <img src="/img/icons/exclamation-button_blue.svg" alt="" height="18">
+
+        <div class="popover fade bs-popover-bottom show tooltip-indicators no-js" x-placement="bottom" style="top: 20px; min-width: 600px; left: -300px;">
+            <div class="popover-body">
+                <table class="w-100 simple-table">
+                    <tr class="font-weight-bold">
+                        <th></th>
+
+                        
+                                                    <th style="text-align:center">Жилищный комитет Санкт-Петербурга</th>
+                        
+                                                <th style="text-align:center">ОАО &quot;Сити Сервис&quot;</th>
+                        
+                        
+                                            </tr>
+                    <tr class="sub-tr">
+                        <td style="width: 20%;text-align:center">Адрес дома</td>
+
+                        
+                                                                                <td style="width: 20%;text-align:center">
+                                г. Санкт-Петербург, ул. Стойкости, д. 7                            </td>
+                        
+                                                                            <td style="width: 20%;text-align:center">
+                            г. Санкт-Петербург, ул. Стойкости, д. 7                        </td>
+                        
+                        
+                                            </tr>
+                </table>
+            </div>
+        </div>
+    </i>
+            </td>
+            <td>г. Санкт-Петербург, ул. Стойкости, д. 7</td>
+        </tr>
+    
+            <tr class="border-bottom-grey">
+            <td>Год постройки:
+                <i class="ico help position-relative tooltip-subject-parent">
+
+            <img src="/img/icons/exclamation-button_blue.svg" alt="" height="18">
+
+        <div class="popover fade bs-popover-bottom show tooltip-indicators no-js" x-placement="bottom" style="top: 20px; min-width: 600px; left: -300px;">
+            <div class="popover-body">
+                <table class="w-100 simple-table">
+                    <tr class="font-weight-bold">
+                        <th></th>
+
+                        
+                        
+                                                <th style="text-align:center">ОАО &quot;Сити Сервис&quot;</th>
+                        
+                        
+                                            </tr>
+                    <tr class="sub-tr">
+                        <td style="width: 20%;text-align:center">Год постройки</td>
+
+                        
+                        
+                                                                            <td style="width: 20%;text-align:center">
+                            1969                        </td>
+                        
+                        
+                                            </tr>
+                </table>
+            </div>
+        </div>
+    </i>
+            </td>
+            <td>1969</td>
+        </tr>
+    
+            <tr class="border-bottom-grey">
+            <td>Год ввода дома в эксплуатацию:
+                <i class="ico help position-relative tooltip-subject-parent">
+
+            <img src="/img/icons/exclamation-button_blue.svg" alt="" height="18">
+
+        <div class="popover fade bs-popover-bottom show tooltip-indicators no-js" x-placement="bottom" style="top: 20px; min-width: 600px; left: -300px;">
+            <div class="popover-body">
+                <table class="w-100 simple-table">
+                    <tr class="font-weight-bold">
+                        <th></th>
+
+                        
+                        
+                                                <th style="text-align:center">ОАО &quot;Сити Сервис&quot;</th>
+                        
+                        
+                                            </tr>
+                    <tr class="sub-tr">
+                        <td style="width: 20%;text-align:center">Год ввода дома в эксплуатацию</td>
+
+                        
+                        
+                                                                            <td style="width: 20%;text-align:center">
+                            1969                        </td>
+                        
+                        
+                                            </tr>
+                </table>
+            </div>
+        </div>
+    </i>
+            </td>
+            <td>1969</td>
+        </tr>
+    
+    
+            <tr class="border-bottom-grey">
+            <td>Тип дома:
+                <i class="ico help position-relative tooltip-subject-parent">
+
+            <img src="/img/icons/exclamation-button_orange.svg" alt="" height="18">
+
+        <div class="popover fade bs-popover-bottom show tooltip-indicators no-js" x-placement="bottom" style="top: 20px; min-width: 600px; left: -300px;">
+            <div class="popover-body">
+                <table class="w-100 simple-table">
+                    <tr class="font-weight-bold">
+                        <th></th>
+
+                        
+                                                    <th style="text-align:center">Жилищный комитет Санкт-Петербурга</th>
+                        
+                                                <th style="text-align:center">ОАО &quot;Сити Сервис&quot;</th>
+                        
+                        
+                                            </tr>
+                    <tr class="sub-tr">
+                        <td style="width: 20%;text-align:center">Тип дома</td>
+
+                        
+                                                                                <td style="width: 20%;text-align:center">
+                                Не заполнено                            </td>
+                        
+                                                                            <td style="width: 20%;text-align:center">
+                            Многоквартирный дом                        </td>
+                        
+                        
+                                            </tr>
+                </table>
+            </div>
+        </div>
+    </i>
+            </td>
+            <td>Многоквартирный дом</td>
+        </tr>
+    
+            <tr class="border-bottom-grey">
+            <td>Способ формирования фонда капитального ремонта:</td>
+            <td>На счете регионального оператора</td>
+        </tr>
+    
+                <tr class="border-bottom-grey">
+            <td>Серия, тип постройки здания:
+                <i class="ico help position-relative tooltip-subject-parent">
+
+            <img src="/img/icons/exclamation-button_blue.svg" alt="" height="18">
+
+        <div class="popover fade bs-popover-bottom show tooltip-indicators no-js" x-placement="bottom" style="top: 20px; min-width: 600px; left: -300px;">
+            <div class="popover-body">
+                <table class="w-100 simple-table">
+                    <tr class="font-weight-bold">
+                        <th></th>
+
+                        
+                        
+                                                <th style="text-align:center">ОАО &quot;Сити Сервис&quot;</th>
+                        
+                        
+                                            </tr>
+                    <tr class="sub-tr">
+                        <td style="width: 20%;text-align:center">Серия, тип постройки здания</td>
+
+                        
+                        
+                                                                            <td style="width: 20%;text-align:center">
+                            1ЛГ-600А                        </td>
+                        
+                        
+                                            </tr>
+                </table>
+            </div>
+        </div>
+    </i>
+            </td>
+            <td>1ЛГ-600А</td>
+        </tr>
+    
+            <tr class="border-bottom-grey">
+            <td>Количество этажей, ед:
+                <i class="ico help position-relative tooltip-subject-parent">
+
+            <img src="/img/icons/exclamation-button_blue.svg" alt="" height="18">
+
+        <div class="popover fade bs-popover-bottom show tooltip-indicators no-js" x-placement="bottom" style="top: 20px; min-width: 600px; left: -300px;">
+            <div class="popover-body">
+                <table class="w-100 simple-table">
+                    <tr class="font-weight-bold">
+                        <th></th>
+
+                        
+                        
+                                                <th style="text-align:center">ОАО &quot;Сити Сервис&quot;</th>
+                        
+                        
+                                            </tr>
+                    <tr class="sub-tr">
+                        <td style="width: 20%;text-align:center">Количество этажей, ед.</td>
+
+                        
+                        
+                                                                            <td style="width: 20%;text-align:center">
+                            9                        </td>
+                        
+                        
+                                            </tr>
+                </table>
+            </div>
+        </div>
+    </i>
+            </td>
+            <td>9</td>
+        </tr>
+    
+            <tr class="border-bottom-grey">
+            <td>Количество подъездов, ед:
+                <i class="ico help position-relative tooltip-subject-parent">
+
+            <img src="/img/icons/exclamation-button_blue.svg" alt="" height="18">
+
+        <div class="popover fade bs-popover-bottom show tooltip-indicators no-js" x-placement="bottom" style="top: 20px; min-width: 600px; left: -300px;">
+            <div class="popover-body">
+                <table class="w-100 simple-table">
+                    <tr class="font-weight-bold">
+                        <th></th>
+
+                        
+                        
+                                                <th style="text-align:center">ОАО &quot;Сити Сервис&quot;</th>
+                        
+                        
+                                            </tr>
+                    <tr class="sub-tr">
+                        <td style="width: 20%;text-align:center">Количество подъездов, ед.</td>
+
+                        
+                        
+                                                                            <td style="width: 20%;text-align:center">
+                            9                        </td>
+                        
+                        
+                                            </tr>
+                </table>
+            </div>
+        </div>
+    </i>
+            </td>
+            <td>9</td>
+        </tr>
+    
+            <tr class="border-bottom-grey">
+            <td>Количество лифтов, ед:
+                <i class="ico help position-relative tooltip-subject-parent">
+
+            <img src="/img/icons/exclamation-button_blue.svg" alt="" height="18">
+
+        <div class="popover fade bs-popover-bottom show tooltip-indicators no-js" x-placement="bottom" style="top: 20px; min-width: 600px; left: -300px;">
+            <div class="popover-body">
+                <table class="w-100 simple-table">
+                    <tr class="font-weight-bold">
+                        <th></th>
+
+                        
+                        
+                                                <th style="text-align:center">ОАО &quot;Сити Сервис&quot;</th>
+                        
+                        
+                                            </tr>
+                    <tr class="sub-tr">
+                        <td style="width: 20%;text-align:center">Количество лифтов, ед.</td>
+
+                        
+                        
+                                                                            <td style="width: 20%;text-align:center">
+                            9                        </td>
+                        
+                        
+                                            </tr>
+                </table>
+            </div>
+        </div>
+    </i>
+            </td>
+            <td>9</td>
+        </tr>
+    
+            <tr class="font-weight-bold">
+            <td colspan="2">Количество помещений, в том числе:</td>
+        </tr>
+                    <tr class="sub-tr">
+                <td>общее, ед
+                    <i class="ico help position-relative tooltip-subject-parent">
+
+            <img src="/img/icons/exclamation-button_blue.svg" alt="" height="18">
+
+        <div class="popover fade bs-popover-bottom show tooltip-indicators no-js" x-placement="bottom" style="top: 20px; min-width: 600px; left: -300px;">
+            <div class="popover-body">
+                <table class="w-100 simple-table">
+                    <tr class="font-weight-bold">
+                        <th></th>
+
+                        
+                        
+                                                <th style="text-align:center">ОАО &quot;Сити Сервис&quot;</th>
+                        
+                        
+                                            </tr>
+                    <tr class="sub-tr">
+                        <td style="width: 20%;text-align:center">Количество помещений. Общее, ед.</td>
+
+                        
+                        
+                                                                            <td style="width: 20%;text-align:center">
+                            322                        </td>
+                        
+                        
+                                            </tr>
+                </table>
+            </div>
+        </div>
+    </i>
+                </td>
+                <td>322</td>
+            </tr>
+        
+                    <tr class="sub-tr">
+                <td>жилых, ед.
+                    <i class="ico help position-relative tooltip-subject-parent">
+
+            <img src="/img/icons/exclamation-button_blue.svg" alt="" height="18">
+
+        <div class="popover fade bs-popover-bottom show tooltip-indicators no-js" x-placement="bottom" style="top: 20px; min-width: 600px; left: -300px;">
+            <div class="popover-body">
+                <table class="w-100 simple-table">
+                    <tr class="font-weight-bold">
+                        <th></th>
+
+                        
+                        
+                                                <th style="text-align:center">ОАО &quot;Сити Сервис&quot;</th>
+                        
+                        
+                                            </tr>
+                    <tr class="sub-tr">
+                        <td style="width: 20%;text-align:center">Количество помещений. Жилых, ед.</td>
+
+                        
+                        
+                                                                            <td style="width: 20%;text-align:center">
+                            320                        </td>
+                        
+                        
+                                            </tr>
+                </table>
+            </div>
+        </div>
+    </i>
+                </td>
+                <td>320</td>
+            </tr>
+        
+                    <tr class="sub-tr">
+                <td>нежилых, ед.
+                    <i class="ico help position-relative tooltip-subject-parent">
+
+            <img src="/img/icons/exclamation-button_blue.svg" alt="" height="18">
+
+        <div class="popover fade bs-popover-bottom show tooltip-indicators no-js" x-placement="bottom" style="top: 20px; min-width: 600px; left: -300px;">
+            <div class="popover-body">
+                <table class="w-100 simple-table">
+                    <tr class="font-weight-bold">
+                        <th></th>
+
+                        
+                        
+                                                <th style="text-align:center">ОАО &quot;Сити Сервис&quot;</th>
+                        
+                        
+                                            </tr>
+                    <tr class="sub-tr">
+                        <td style="width: 20%;text-align:center">Количество помещений. Нежилых, ед.</td>
+
+                        
+                        
+                                                                            <td style="width: 20%;text-align:center">
+                            2                        </td>
+                        
+                        
+                                            </tr>
+                </table>
+            </div>
+        </div>
+    </i>
+                </td>
+                <td>2</td>
+            </tr>
+                <tr class="border-bottom-grey"><td colspan="2" style="padding:0;"></td></tr>
+    
+    
+            <tr class="font-weight-bold">
+            <td colspan="2">Общая площадь дома, в том числе:</td>
+        </tr>
+
+                    <tr class="sub-tr">
+                <td>общая площадь, кв.м
+                    <i class="ico help position-relative tooltip-subject-parent">
+
+            <img src="/img/icons/exclamation-button_blue.svg" alt="" height="18">
+
+        <div class="popover fade bs-popover-bottom show tooltip-indicators no-js" x-placement="bottom" style="top: 20px; min-width: 600px; left: -300px;">
+            <div class="popover-body">
+                <table class="w-100 simple-table">
+                    <tr class="font-weight-bold">
+                        <th></th>
+
+                        
+                        
+                                                <th style="text-align:center">ОАО &quot;Сити Сервис&quot;</th>
+                        
+                        
+                                            </tr>
+                    <tr class="sub-tr">
+                        <td style="width: 20%;text-align:center">Общая площадь дома, кв.м.</td>
+
+                        
+                        
+                                                                            <td style="width: 20%;text-align:center">
+                            18658.09                        </td>
+                        
+                        
+                                            </tr>
+                </table>
+            </div>
+        </div>
+    </i>
+                </td>
+                <td>18 658,09</td>
+            </tr>
+        
+                    <tr class="sub-tr">
+                <td>общая площадь жилых помещений, кв.мм
+                    <i class="ico help position-relative tooltip-subject-parent">
+
+            <img src="/img/icons/exclamation-button_blue.svg" alt="" height="18">
+
+        <div class="popover fade bs-popover-bottom show tooltip-indicators no-js" x-placement="bottom" style="top: 20px; min-width: 600px; left: -300px;">
+            <div class="popover-body">
+                <table class="w-100 simple-table">
+                    <tr class="font-weight-bold">
+                        <th></th>
+
+                        
+                        
+                                                <th style="text-align:center">ОАО &quot;Сити Сервис&quot;</th>
+                        
+                        
+                                            </tr>
+                    <tr class="sub-tr">
+                        <td style="width: 20%;text-align:center">Общая площадь жилых помещений, кв.м.</td>
+
+                        
+                        
+                                                                            <td style="width: 20%;text-align:center">
+                            16216.09                        </td>
+                        
+                        
+                                            </tr>
+                </table>
+            </div>
+        </div>
+    </i>
+                </td>
+                <td>16 216,09</td>
+            </tr>
+        
+                    <tr class="sub-tr">
+                <td>общая площадь нежилых помещений, кв.м
+                    <i class="ico help position-relative tooltip-subject-parent">
+
+            <img src="/img/icons/exclamation-button_blue.svg" alt="" height="18">
+
+        <div class="popover fade bs-popover-bottom show tooltip-indicators no-js" x-placement="bottom" style="top: 20px; min-width: 600px; left: -300px;">
+            <div class="popover-body">
+                <table class="w-100 simple-table">
+                    <tr class="font-weight-bold">
+                        <th></th>
+
+                        
+                        
+                                                <th style="text-align:center">ОАО &quot;Сити Сервис&quot;</th>
+                        
+                        
+                                            </tr>
+                    <tr class="sub-tr">
+                        <td style="width: 20%;text-align:center">Общая площадь нежилых помещений, кв.м.</td>
+
+                        
+                        
+                                                                            <td style="width: 20%;text-align:center">
+                            50.93                        </td>
+                        
+                        
+                                            </tr>
+                </table>
+            </div>
+        </div>
+    </i>
+                </td>
+                <td>50,93</td>
+            </tr>
+        
+                    <tr class="sub-tr">
+                <td>общая площадь помещений, входящих в состав общего имущества, кв.м.
+                    <i class="ico help position-relative tooltip-subject-parent">
+
+            <img src="/img/icons/exclamation-button_blue.svg" alt="" height="18">
+
+        <div class="popover fade bs-popover-bottom show tooltip-indicators no-js" x-placement="bottom" style="top: 20px; min-width: 600px; left: -300px;">
+            <div class="popover-body">
+                <table class="w-100 simple-table">
+                    <tr class="font-weight-bold">
+                        <th></th>
+
+                        
+                        
+                                                <th style="text-align:center">ОАО &quot;Сити Сервис&quot;</th>
+                        
+                        
+                                            </tr>
+                    <tr class="sub-tr">
+                        <td style="width: 20%;text-align:center">Общая площадь помещений, входящих в состав общего имущества, кв.м.</td>
+
+                        
+                        
+                                                                            <td style="width: 20%;text-align:center">
+                            2442.00                        </td>
+                        
+                        
+                                            </tr>
+                </table>
+            </div>
+        </div>
+    </i>
+                </td>
+                <td>2 442,00</td>
+            </tr>
+                <tr class="border-bottom-grey"><td colspan="2" style="padding:0;"></td></tr>
+    
+            <tr class="font-weight-bold">
+            <td colspan="2">Общие сведения о земельном участке, на котором расположен многоквартирный дом:</td>
+        </tr>
+                    <tr class="sub-tr">
+                <td>площадь земельного участка по государственному кадастру, кв.м.
+                    <i class="ico help position-relative tooltip-subject-parent">
+
+            <img src="/img/icons/exclamation-button_blue.svg" alt="" height="18">
+
+        <div class="popover fade bs-popover-bottom show tooltip-indicators no-js" x-placement="bottom" style="top: 20px; min-width: 600px; left: -300px;">
+            <div class="popover-body">
+                <table class="w-100 simple-table">
+                    <tr class="font-weight-bold">
+                        <th></th>
+
+                        
+                        
+                                                <th style="text-align:center">ОАО &quot;Сити Сервис&quot;</th>
+                        
+                        
+                                            </tr>
+                    <tr class="sub-tr">
+                        <td style="width: 20%;text-align:center">Площадь земельного участка по государственному кадастру, кв.м.</td>
+
+                        
+                        
+                                                                            <td style="width: 20%;text-align:center">
+                            0.00                        </td>
+                        
+                        
+                                            </tr>
+                </table>
+            </div>
+        </div>
+    </i>
+                </td>
+                <td>0,00</td>
+            </tr>
+        
+        
+                <tr class="border-bottom-grey"><td colspan="2" style="padding:0;"></td></tr>
+    
+    
+    
+            <tr class="border-bottom-grey">
+            <td>Класс энергоэффективности дома</td>
+            <td>Не присвоен</td>
+        </tr>
+    
+    
+    
+    
+    
+            <tr class="font-weight-bold">
+            <td colspan="2">Элементы благоустройства:</td>
+        </tr>
+
+                    <tr class="sub-tr">
+                <td>детская площадка</td>
+                <td>Да</td>
+            </tr>
+        
+        
+                    <tr class="sub-tr">
+                <td>малые архитектурные формы</td>
+                <td>Да</td>
+            </tr>
+            </table>
+    </div>
+
+    <div class="tab-content fade tab-pane" role="tabpanel" aria-labelledby="constructive-tab" id="list-constructive">
+        <table id="house-passport-constructive" class="w-100 simple-table">
+    <tr class="font-weight-bold">
+        <td>По данным Фонда ЖКХ информация последний раз актуализировалась:</td>
+        <td>08.07.2021</td>
     </tr>
-    <tr>
-        <td>
-            <input name="submit" type="submit" value="&#x0412;&#x0432;&#x043E;&#x0434;"> <input type="button"
-                                                                                                       onclick="window.location.reload()"
-                                                                                                       value="Обновить рисунок"/>
-        </td>
+            <tr class="font-weight-bold border-top-grey">
+            <td colspan="2">Фундамент</td>
+        </tr>
+                    <tr class="sub-tr">
+                <td>Тип фундамента
+                                            <i class="ico help position-relative tooltip-subject-parent">
+
+            <img src="/img/icons/exclamation-button_blue.svg" alt="" height="18">
+
+        <div class="popover fade bs-popover-bottom show tooltip-indicators no-js" x-placement="bottom" style="top: 20px; min-width: 600px; left: -300px;">
+            <div class="popover-body">
+                <table class="w-100 simple-table">
+                    <tr class="font-weight-bold">
+                        <th></th>
+
+                        
+                        
+                                                <th style="text-align:center">ОАО &quot;Сити Сервис&quot;</th>
+                        
+                        
+                                            </tr>
+                    <tr class="sub-tr">
+                        <td style="width: 20%;text-align:center">Фундамент. Тип фундамента</td>
+
+                        
+                        
+                                                                            <td style="width: 20%;text-align:center">
+                            Свайный                        </td>
+                        
+                        
+                                            </tr>
+                </table>
+            </div>
+        </div>
+    </i>
+                                    </td>
+                <td>Свайный</td>
+            </tr>
+                                            
+            <tr class="font-weight-bold border-top-grey">
+            <td colspan="2">Стены и перекрытия</td>
+        </tr>
+                    <tr class="sub-tr">
+                <td>Тип перекрытий
+                                            <i class="ico help position-relative tooltip-subject-parent">
+
+            <img src="/img/icons/exclamation-button_blue.svg" alt="" height="18">
+
+        <div class="popover fade bs-popover-bottom show tooltip-indicators no-js" x-placement="bottom" style="top: 20px; min-width: 600px; left: -300px;">
+            <div class="popover-body">
+                <table class="w-100 simple-table">
+                    <tr class="font-weight-bold">
+                        <th></th>
+
+                        
+                        
+                                                <th style="text-align:center">ОАО &quot;Сити Сервис&quot;</th>
+                        
+                        
+                                            </tr>
+                    <tr class="sub-tr">
+                        <td style="width: 20%;text-align:center">Стены и перекрытия. Тип перекрытий</td>
+
+                        
+                        
+                                                                            <td style="width: 20%;text-align:center">
+                            Железобетонные                        </td>
+                        
+                        
+                                            </tr>
+                </table>
+            </div>
+        </div>
+    </i>
+                                    </td>
+                <td>Железобетонные</td>
+            </tr>
+                            <tr class="sub-tr">
+                <td>Материал несущих стен
+                                            <i class="ico help position-relative tooltip-subject-parent">
+
+            <img src="/img/icons/exclamation-button_blue.svg" alt="" height="18">
+
+        <div class="popover fade bs-popover-bottom show tooltip-indicators no-js" x-placement="bottom" style="top: 20px; min-width: 600px; left: -300px;">
+            <div class="popover-body">
+                <table class="w-100 simple-table">
+                    <tr class="font-weight-bold">
+                        <th></th>
+
+                        
+                        
+                                                <th style="text-align:center">ОАО &quot;Сити Сервис&quot;</th>
+                        
+                        
+                                            </tr>
+                    <tr class="sub-tr">
+                        <td style="width: 20%;text-align:center">Стены и перекрытия. Материал несущих стен</td>
+
+                        
+                        
+                                                                            <td style="width: 20%;text-align:center">
+                            Панельные                        </td>
+                        
+                        
+                                            </tr>
+                </table>
+            </div>
+        </div>
+    </i>
+                                    </td>
+                <td>Панельные</td>
+            </tr>
+                            
+            <tr class="font-weight-bold border-top-grey">
+            <td colspan="2">Подвал</td>
+        </tr>
+                    <tr class="sub-tr">
+                <td>Площадь подвала по полу, кв.м
+                                            <i class="ico help position-relative tooltip-subject-parent">
+
+            <img src="/img/icons/exclamation-button_blue.svg" alt="" height="18">
+
+        <div class="popover fade bs-popover-bottom show tooltip-indicators no-js" x-placement="bottom" style="top: 20px; min-width: 600px; left: -300px;">
+            <div class="popover-body">
+                <table class="w-100 simple-table">
+                    <tr class="font-weight-bold">
+                        <th></th>
+
+                        
+                        
+                                                <th style="text-align:center">ОАО &quot;Сити Сервис&quot;</th>
+                        
+                        
+                                            </tr>
+                    <tr class="sub-tr">
+                        <td style="width: 20%;text-align:center">Подвал. Площадь подвала по полу, кв.м</td>
+
+                        
+                        
+                                                                            <td style="width: 20%;text-align:center">
+                            53.00                        </td>
+                        
+                        
+                                            </tr>
+                </table>
+            </div>
+        </div>
+    </i>
+                                    </td>
+                <td>53,00</td>
+            </tr>
+                                    
+            <tr class="font-weight-bold border-top-grey">
+            <td colspan="2">Мусоропроводы</td>
+        </tr>
+                    <tr class="sub-tr">
+                <td>Тип мусоропровода
+                                            <i class="ico help position-relative tooltip-subject-parent">
+
+            <img src="/img/icons/exclamation-button_blue.svg" alt="" height="18">
+
+        <div class="popover fade bs-popover-bottom show tooltip-indicators no-js" x-placement="bottom" style="top: 20px; min-width: 600px; left: -300px;">
+            <div class="popover-body">
+                <table class="w-100 simple-table">
+                    <tr class="font-weight-bold">
+                        <th></th>
+
+                        
+                        
+                                                <th style="text-align:center">ОАО &quot;Сити Сервис&quot;</th>
+                        
+                        
+                                            </tr>
+                    <tr class="sub-tr">
+                        <td style="width: 20%;text-align:center">Мусоропроводы. Тип мусоропровода</td>
+
+                        
+                        
+                                                                            <td style="width: 20%;text-align:center">
+                            На лестничной клетке                        </td>
+                        
+                        
+                                            </tr>
+                </table>
+            </div>
+        </div>
+    </i>
+                                    </td>
+                <td>На лестничной клетке</td>
+            </tr>
+                            <tr class="sub-tr">
+                <td>Количество мусоропроводов, ед.
+                                            <i class="ico help position-relative tooltip-subject-parent">
+
+            <img src="/img/icons/exclamation-button_blue.svg" alt="" height="18">
+
+        <div class="popover fade bs-popover-bottom show tooltip-indicators no-js" x-placement="bottom" style="top: 20px; min-width: 600px; left: -300px;">
+            <div class="popover-body">
+                <table class="w-100 simple-table">
+                    <tr class="font-weight-bold">
+                        <th></th>
+
+                        
+                        
+                                                <th style="text-align:center">ОАО &quot;Сити Сервис&quot;</th>
+                        
+                        
+                                            </tr>
+                    <tr class="sub-tr">
+                        <td style="width: 20%;text-align:center">Мусоропроводы. Количество мусоропроводов, ед.</td>
+
+                        
+                        
+                                                                            <td style="width: 20%;text-align:center">
+                            9                        </td>
+                        
+                        
+                                            </tr>
+                </table>
+            </div>
+        </div>
+    </i>
+                                    </td>
+                <td>9</td>
+            </tr>
+                            
+                    <tr class="font-weight-bold border-top-grey">
+            <td colspan="2">Фасад</td>
+        </tr>
+        <tr>
+            <td colspan="2" style="padding: 0;">
+                <table class="w-100 al-center">
+                    <tr class="border-bottom-bold-blue font-weight-bold">
+                        <td style="text-align: center">Тип фасада</td>                                                                                            </tr>
+                                        <tr>
+                                                        <td style="text-align: center">Окрашенный</td>
+                                                                            </tr>
+            
+                </table>
+            </td>
+        </tr>
+    
+                    <tr class="font-weight-bold border-top-grey">
+            <td colspan="2" class="pt-5">Крыши</td>
+        </tr>
+        <tr>
+            <td colspan="2" style="padding: 0;">
+                <table class="w-100 al-center">
+                    <tr class="border-bottom-bold-blue font-weight-bold">
+                        <td style="text-align: center">Тип крыши, кровли</td>                                                                                            </tr>
+                                        <tr>
+                                                        <td style="text-align: center">Плоская</td>
+                                                                            </tr>
+            
+                </table>
+            </td>
+        </tr>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    </table>
+    </div>
+
+            <div class="tab-content fade tab-pane" role="tabpanel" aria-labelledby="lifts-tab" id="my-home-lifts">
+            <table class="w-100 simple-table">
+    <tr class="border-bottom-grey font-weight-bold">
+        <td><span  class="f-14 text-black">По данным Фонда ЖКХ информация последний раз актуализировалась:</span></td>
+        <td align="right">08.07.2021</td>
     </tr>
 </table>
-</form></body>
+<table id="profile-house-style" class="w-100 al-center al-edges">
+    <tr class="border-bottom-bold-blue font-weight-bold">
+        <td>Тип лифта</td>
+        <td>Грузоподъемность, кг.</td>
+        <td>Количество остановок, ед.</td>
+        <td>Год проведения последнего капитального ремонта</td>
+        <td>Комментарий</td>
+    </tr>
+            <tr class="border-bottom-grey">
+            <td> Пассажирский </td>
+            <td>-</td>
+            <td>-</td>
+            <td>-</td>
+            <td style="text-align: center">-</td>
+        </tr>
+            <tr class="border-bottom-grey">
+            <td> Пассажирский </td>
+            <td>-</td>
+            <td>-</td>
+            <td>-</td>
+            <td style="text-align: center">-</td>
+        </tr>
+            <tr class="border-bottom-grey">
+            <td> Пассажирский </td>
+            <td>-</td>
+            <td>-</td>
+            <td>-</td>
+            <td style="text-align: center">-</td>
+        </tr>
+            <tr class="border-bottom-grey">
+            <td> Пассажирский </td>
+            <td>-</td>
+            <td>-</td>
+            <td>-</td>
+            <td style="text-align: center">-</td>
+        </tr>
+            <tr class="border-bottom-grey">
+            <td> Пассажирский </td>
+            <td>-</td>
+            <td>-</td>
+            <td>-</td>
+            <td style="text-align: center">-</td>
+        </tr>
+            <tr class="border-bottom-grey">
+            <td> Пассажирский </td>
+            <td>-</td>
+            <td>-</td>
+            <td>-</td>
+            <td style="text-align: center">-</td>
+        </tr>
+            <tr class="border-bottom-grey">
+            <td> Пассажирский </td>
+            <td>-</td>
+            <td>-</td>
+            <td>-</td>
+            <td style="text-align: center">-</td>
+        </tr>
+            <tr class="border-bottom-grey">
+            <td> Пассажирский </td>
+            <td>-</td>
+            <td>-</td>
+            <td>-</td>
+            <td style="text-align: center">-</td>
+        </tr>
+            <tr class="border-bottom-grey">
+            <td> Пассажирский </td>
+            <td>-</td>
+            <td>-</td>
+            <td>-</td>
+            <td style="text-align: center">-</td>
+        </tr>
+    </table>
+        </div>
+    
+    <div class="tab-content fade tab-pane" role="tabpanel" aria-labelledby="constructive-tab" id="list-engineering-systems">
+        <table id="house-passport-engineering-systems" class="w-100 simple-table">
+    <tr class="font-weight-bold border-bottom-grey">
+        <td>По данным Фонда ЖКХ информация последний раз актуализировалась:</td>
+        <td>08.07.2021</td>
+    </tr>
+
+            <tr class="font-weight-bold border-top-grey">
+            <td colspan="2">Система электроснабжения</td>
+        </tr>
+                    <tr class="sub-tr">
+                <td>Тип системы электроснабжения
+                                            <i class="ico help position-relative tooltip-subject-parent">
+
+            <img src="/img/icons/exclamation-button_blue.svg" alt="" height="18">
+
+        <div class="popover fade bs-popover-bottom show tooltip-indicators no-js" x-placement="bottom" style="top: 20px; min-width: 600px; left: -300px;">
+            <div class="popover-body">
+                <table class="w-100 simple-table">
+                    <tr class="font-weight-bold">
+                        <th></th>
+
+                        
+                        
+                                                <th style="text-align:center">ОАО &quot;Сити Сервис&quot;</th>
+                        
+                        
+                                            </tr>
+                    <tr class="sub-tr">
+                        <td style="width: 20%;text-align:center">Система электроснабжения. Тип системы электроснабжения</td>
+
+                        
+                        
+                                                                            <td style="width: 20%;text-align:center">
+                            Центральное                        </td>
+                        
+                        
+                                            </tr>
+                </table>
+            </div>
+        </div>
+    </i>
+                                    </td>
+                <td>Центральное</td>
+            </tr>
+        
+        
+        
+            
+            <tr class="font-weight-bold border-top-grey">
+            <td colspan="2">Система теплоснабжения</td>
+        </tr>
+                    <tr class="sub-tr">
+                <td>Тип системы теплоснабжения
+                                            <i class="ico help position-relative tooltip-subject-parent">
+
+            <img src="/img/icons/exclamation-button_blue.svg" alt="" height="18">
+
+        <div class="popover fade bs-popover-bottom show tooltip-indicators no-js" x-placement="bottom" style="top: 20px; min-width: 600px; left: -300px;">
+            <div class="popover-body">
+                <table class="w-100 simple-table">
+                    <tr class="font-weight-bold">
+                        <th></th>
+
+                        
+                        
+                                                <th style="text-align:center">ОАО &quot;Сити Сервис&quot;</th>
+                        
+                        
+                                            </tr>
+                    <tr class="sub-tr">
+                        <td style="width: 20%;text-align:center">Система теплоснабжения. Тип системы теплоснабжения</td>
+
+                        
+                        
+                                                                            <td style="width: 20%;text-align:center">
+                            Центральное                        </td>
+                        
+                        
+                                            </tr>
+                </table>
+            </div>
+        </div>
+    </i>
+                                    </td>
+                <td>Центральное</td>
+            </tr>
+        
+        
+        
+            
+    
+    
+            <tr class="font-weight-bold border-top-grey">
+            <td colspan="2">Система горячего водоснабжения</td>
+        </tr>
+                    <tr class="sub-tr">
+                <td>Тип системы горячего водоснабжения
+                                            <i class="ico help position-relative tooltip-subject-parent">
+
+            <img src="/img/icons/exclamation-button_blue.svg" alt="" height="18">
+
+        <div class="popover fade bs-popover-bottom show tooltip-indicators no-js" x-placement="bottom" style="top: 20px; min-width: 600px; left: -300px;">
+            <div class="popover-body">
+                <table class="w-100 simple-table">
+                    <tr class="font-weight-bold">
+                        <th></th>
+
+                        
+                        
+                                                <th style="text-align:center">ОАО &quot;Сити Сервис&quot;</th>
+                        
+                        
+                                            </tr>
+                    <tr class="sub-tr">
+                        <td style="width: 20%;text-align:center">Система горячего водоснабжения. Тип системы горячего водоснабжения</td>
+
+                        
+                        
+                                                                            <td style="width: 20%;text-align:center">
+                            Открытая с отбором сетевой воды на горячее водоснабжение из тепловой сети                        </td>
+                        
+                        
+                                            </tr>
+                </table>
+            </div>
+        </div>
+    </i>
+                                    </td>
+                <td>Открытая с отбором сетевой воды на горячее водоснабжение из тепловой сети</td>
+            </tr>
+        
+        
+        
+            
+    
+    
+            <tr class="font-weight-bold border-top-grey">
+            <td colspan="2">Система холодного водоснабжения</td>
+        </tr>
+                    <tr class="sub-tr">
+                <td>Тип системы холодного водоснабжения
+                                            <i class="ico help position-relative tooltip-subject-parent">
+
+            <img src="/img/icons/exclamation-button_blue.svg" alt="" height="18">
+
+        <div class="popover fade bs-popover-bottom show tooltip-indicators no-js" x-placement="bottom" style="top: 20px; min-width: 600px; left: -300px;">
+            <div class="popover-body">
+                <table class="w-100 simple-table">
+                    <tr class="font-weight-bold">
+                        <th></th>
+
+                        
+                        
+                                                <th style="text-align:center">ОАО &quot;Сити Сервис&quot;</th>
+                        
+                        
+                                            </tr>
+                    <tr class="sub-tr">
+                        <td style="width: 20%;text-align:center">Система холодного водоснабжения. Тип системы холодного водоснабжения</td>
+
+                        
+                        
+                                                                            <td style="width: 20%;text-align:center">
+                            Центральное                        </td>
+                        
+                        
+                                            </tr>
+                </table>
+            </div>
+        </div>
+    </i>
+                                    </td>
+                <td>Центральное</td>
+            </tr>
+        
+        
+        
+            
+    
+    
+            <tr class="font-weight-bold border-top-grey">
+            <td colspan="2">Система водоотведения</td>
+        </tr>
+                    <tr class="sub-tr">
+                <td>Тип системы водоотведения
+                                            <i class="ico help position-relative tooltip-subject-parent">
+
+            <img src="/img/icons/exclamation-button_blue.svg" alt="" height="18">
+
+        <div class="popover fade bs-popover-bottom show tooltip-indicators no-js" x-placement="bottom" style="top: 20px; min-width: 600px; left: -300px;">
+            <div class="popover-body">
+                <table class="w-100 simple-table">
+                    <tr class="font-weight-bold">
+                        <th></th>
+
+                        
+                        
+                                                <th style="text-align:center">ОАО &quot;Сити Сервис&quot;</th>
+                        
+                        
+                                            </tr>
+                    <tr class="sub-tr">
+                        <td style="width: 20%;text-align:center">Система водоотведения. Тип системы водоотведения</td>
+
+                        
+                        
+                                                                            <td style="width: 20%;text-align:center">
+                            Центральное                        </td>
+                        
+                        
+                                            </tr>
+                </table>
+            </div>
+        </div>
+    </i>
+                                    </td>
+                <td>Центральное</td>
+            </tr>
+        
+        
+        
+            
+    
+    
+            <tr class="font-weight-bold border-top-grey">
+            <td colspan="2">Система газоснабжения</td>
+        </tr>
+                    <tr class="sub-tr">
+                <td>Тип системы газоснабжения
+                                            <i class="ico help position-relative tooltip-subject-parent">
+
+            <img src="/img/icons/exclamation-button_blue.svg" alt="" height="18">
+
+        <div class="popover fade bs-popover-bottom show tooltip-indicators no-js" x-placement="bottom" style="top: 20px; min-width: 600px; left: -300px;">
+            <div class="popover-body">
+                <table class="w-100 simple-table">
+                    <tr class="font-weight-bold">
+                        <th></th>
+
+                        
+                        
+                                                <th style="text-align:center">ОАО &quot;Сити Сервис&quot;</th>
+                        
+                        
+                                            </tr>
+                    <tr class="sub-tr">
+                        <td style="width: 20%;text-align:center">Система газоснабжения. Тип системы газоснабжения</td>
+
+                        
+                        
+                                                                            <td style="width: 20%;text-align:center">
+                            Центральное                        </td>
+                        
+                        
+                                            </tr>
+                </table>
+            </div>
+        </div>
+    </i>
+                                    </td>
+                <td>Центральное</td>
+            </tr>
+        
+        
+        
+            
+            <tr class="font-weight-bold border-top-grey">
+            <td colspan="2">Система вентиляции</td>
+        </tr>
+                    <tr class="sub-tr">
+                <td>Тип системы вентиляции
+                                            <i class="ico help position-relative tooltip-subject-parent">
+
+            <img src="/img/icons/exclamation-button_blue.svg" alt="" height="18">
+
+        <div class="popover fade bs-popover-bottom show tooltip-indicators no-js" x-placement="bottom" style="top: 20px; min-width: 600px; left: -300px;">
+            <div class="popover-body">
+                <table class="w-100 simple-table">
+                    <tr class="font-weight-bold">
+                        <th></th>
+
+                        
+                        
+                                                <th style="text-align:center">ОАО &quot;Сити Сервис&quot;</th>
+                        
+                        
+                                            </tr>
+                    <tr class="sub-tr">
+                        <td style="width: 20%;text-align:center">Система вентиляции. Тип системы вентиляции</td>
+
+                        
+                        
+                                                                            <td style="width: 20%;text-align:center">
+                            Вытяжная вентиляция                        </td>
+                        
+                        
+                                            </tr>
+                </table>
+            </div>
+        </div>
+    </i>
+                                    </td>
+                <td>Вытяжная вентиляция</td>
+            </tr>
+        
+        
+        
+            
+            <tr class="font-weight-bold border-top-grey">
+            <td colspan="2">Система пожаротушения</td>
+        </tr>
+                    <tr class="sub-tr">
+                <td>Тип системы пожаротушения
+                                            <i class="ico help position-relative tooltip-subject-parent">
+
+            <img src="/img/icons/exclamation-button_blue.svg" alt="" height="18">
+
+        <div class="popover fade bs-popover-bottom show tooltip-indicators no-js" x-placement="bottom" style="top: 20px; min-width: 600px; left: -300px;">
+            <div class="popover-body">
+                <table class="w-100 simple-table">
+                    <tr class="font-weight-bold">
+                        <th></th>
+
+                        
+                        
+                                                <th style="text-align:center">ОАО &quot;Сити Сервис&quot;</th>
+                        
+                        
+                                            </tr>
+                    <tr class="sub-tr">
+                        <td style="width: 20%;text-align:center">Система пожаротушения. Тип системы пожаротушения</td>
+
+                        
+                        
+                                                                            <td style="width: 20%;text-align:center">
+                            Отсутствует                        </td>
+                        
+                        
+                                            </tr>
+                </table>
+            </div>
+        </div>
+    </i>
+                                    </td>
+                <td>Отсутствует</td>
+            </tr>
+        
+        
+        
+            
+            <tr class="font-weight-bold border-top-grey">
+            <td colspan="2">Система водостоков</td>
+        </tr>
+                    <tr class="sub-tr">
+                <td>Тип системы водостоков
+                                            <i class="ico help position-relative tooltip-subject-parent">
+
+            <img src="/img/icons/exclamation-button_blue.svg" alt="" height="18">
+
+        <div class="popover fade bs-popover-bottom show tooltip-indicators no-js" x-placement="bottom" style="top: 20px; min-width: 600px; left: -300px;">
+            <div class="popover-body">
+                <table class="w-100 simple-table">
+                    <tr class="font-weight-bold">
+                        <th></th>
+
+                        
+                        
+                                                <th style="text-align:center">ОАО &quot;Сити Сервис&quot;</th>
+                        
+                        
+                                            </tr>
+                    <tr class="sub-tr">
+                        <td style="width: 20%;text-align:center">Система водостоков. Тип системы водостоков</td>
+
+                        
+                        
+                                                                            <td style="width: 20%;text-align:center">
+                            Внутренние водостоки                        </td>
+                        
+                        
+                                            </tr>
+                </table>
+            </div>
+        </div>
+    </i>
+                                    </td>
+                <td>Внутренние водостоки</td>
+            </tr>
+        
+        
+        
+            </table>
+    </div>
+
+            <div class="tab-content fade tab-pane" role="tabpanel" aria-labelledby="devices-tab" id="list-devices">
+            <table id="profile-house-style" class="w-100  al-center al-edges">
+    <tr class="border-bottom-grey font-weight-bold">
+        <td colspan="6"><span  class="f-14 text-black">По данным Фонда ЖКХ информация последний раз актуализировалась:</span></td>
+        <td>08.07.2021</td>
+    </tr>
+    <tr class="border-bottom-bold-blue font-weight-bold">
+        <td>Вид коммунальной услуги</td>
+        <td>Наличие прибора учета</td>
+        <td>Единица измерения</td>
+        <td>Дата ввода прибора в эксплуатацию</td>
+        <td>Дата проверки / замены</td>
+        <td>Год проведения последнего капитального ремонта</td>
+        <td>Комментарий</td>
+    </tr>
+                    <tr class="border-bottom-grey">
+            <td>
+                                    Газоснабжение
+                            </td>
+            <td>
+                                    -
+                            </td>
+            <td>
+                                    -
+                            </td>
+            <td>
+                                    -
+                            </td>
+            <td>
+                                    -
+                            </td>
+            <td>
+                                    -
+                            </td>
+            <td>
+                                    -
+                            </td>
+        </tr>
+                    <tr class="border-bottom-grey">
+            <td>
+                                    Электроснабжение
+                            </td>
+            <td>
+                                    -
+                            </td>
+            <td>
+                                    -
+                            </td>
+            <td>
+                                    -
+                            </td>
+            <td>
+                                    -
+                            </td>
+            <td>
+                                    -
+                            </td>
+            <td>
+                                    -
+                            </td>
+        </tr>
+                    <tr class="border-bottom-grey">
+            <td>
+                                    Водоотведение
+                            </td>
+            <td>
+                                    -
+                            </td>
+            <td>
+                                    -
+                            </td>
+            <td>
+                                    -
+                            </td>
+            <td>
+                                    -
+                            </td>
+            <td>
+                                    -
+                            </td>
+            <td>
+                                    -
+                            </td>
+        </tr>
+                    <tr class="border-bottom-grey">
+            <td>
+                                    Холодное водоснабжение
+                            </td>
+            <td>
+                                    -
+                            </td>
+            <td>
+                                    -
+                            </td>
+            <td>
+                                    -
+                            </td>
+            <td>
+                                    -
+                            </td>
+            <td>
+                                    -
+                            </td>
+            <td>
+                                    -
+                            </td>
+        </tr>
+                    <tr class="border-bottom-grey">
+            <td>
+                                    Горячее водоснабжение
+                            </td>
+            <td>
+                                    Установлен
+                            </td>
+            <td>
+                                    Гкал
+                            </td>
+            <td>
+                                    02.07.2009
+                            </td>
+            <td>
+                                    18.09.2012
+                            </td>
+            <td>
+                                    -
+                            </td>
+            <td>
+                                    -
+                            </td>
+        </tr>
+                    <tr class="border-bottom-grey">
+            <td>
+                                    Отопление
+                            </td>
+            <td>
+                                    Установлен
+                            </td>
+            <td>
+                                    Гкал
+                            </td>
+            <td>
+                                    02.07.2009
+                            </td>
+            <td>
+                                    18.09.2012
+                            </td>
+            <td>
+                                    -
+                            </td>
+            <td>
+                                    -
+                            </td>
+        </tr>
+    </table>
+        </div>
+    
+    <script>
+        $('table.w-100.simple-table').each(function(){
+            if($.trim($(this).html()) === '') {
+                $(this).html('Данные по выбранному разделу отсутствует.');
+            }
+        });
+
+        if (document.querySelector('div#list-constructive table').rows.length === 1) {
+            document.querySelector('a#constructive-tab').parentElement.parentElement.hidden = true
+        }
+    </script>
+
+    </div>
+            </div>
+        </div>
+    </section>
+    <section>
+        <div class="container py-5 my-4">
+            <h2 class="f-28 lh-38 mb-5">Дом на карте</h2>
+            <div class="house-map my-4" id="map"></div>
+        </div>
+    </section>
+    <script>
+        $('#headingmodernization a').on('click', function () {
+            $('#collapsemodernization a').first('a').trigger('click');
+            $('.accordion .card .active').attr('aria-expanded', 'false').removeClass('active');
+            $(this).addClass('active').css('text-decoration', 'none');
+        });
+        $('.accordion .card .active').on('click', function () {
+            if ($(this).attr('id') == '#headingmodernization') return;
+            location.reload();
+        });
+        $(document).ready(function () {
+            $(document).on('change', '#house-report-period-select', function () {
+                $.ajax({
+                    url: '/myhouse/profile/finance-tab-by-revision/6921359/' + this.value + '/',
+                    success: function (html) {
+                        $('.tab-content').show('hide');
+                        $('#tab-content-block').html(html);
+                        let target = $('[role="tab"].active').attr('href');
+                        $(target).tab('show');
+                        $('#tab-content-block').find('.js-rows-toggle').on('click', function (e) {
+                            e.preventDefault();
+                            e.stopPropagation();
+
+                            if (!$(this).hasClass('opened')) {
+                                $(this).addClass('opened');
+                                $(this).closest('tr').nextAll('tr').each(function (index, tr) {
+                                    if (!$(tr).hasClass('hidden')) return false;
+                                    $(tr).removeClass('hidden').addClass('opened');
+                                });
+                            } else {
+                                $(this).removeClass('opened');
+                                $(this).closest('tr').nextAll('tr').each(function (index, tr) {
+                                    if (!$(tr).hasClass('opened')) return false;
+                                    $(tr).removeClass('opened').addClass('hidden');
+                                });
+                            }
+                        });
+                    }
+                });
+            });
+        });
+    </script>
+    <section class="background-grey mt-5 no_print">
+        <div class="container py-2">
+            <div id="partners" class="py-5 col-11 m-auto">
+                <a href="/away?to=www.minstroyrf.ru"
+                   class="slide d-flex align-items-center justify-content-around pr-4">
+                    <div class="background-white rounded-circle d-flex mr-3 flex-column align-items-center justify-content-center">
+                        <img src="/images/minstroy-logo-active.png" alt="">
+                    </div>
+                    <span class="f-14 fw-300 lh-16">Министерство строительства и ЖКХ Российской Федерации</span>
+                </a>
+                <a href="/away?to=http://www.ach.gov.ru/ru/"
+                   class="slide d-flex align-items-center justify-content-around pr-4">
+                    <div class="background-white rounded-circle d-flex mr-3 flex-column align-items-center justify-content-center">
+                        <img src="/images/partner-logo3-active.png" alt="">
+                    </div>
+                    <span class="f-14 fw-300 lh-16">Счетная палата Российской Федерации</span>
+                </a>
+                <a href="/away?to=https://fas.gov.ru/"
+                   class="slide d-flex align-items-center justify-content-around pr-4">
+                    <div class="background-white rounded-circle d-flex mr-3 flex-column align-items-center justify-content-center">
+                        <img src="/images/partner-logo4-active.png" alt="">
+                    </div>
+                    <span class="f-14 fw-300 lh-16">Федеральная антимонопольная служба</span>
+                </a>
+                <a href="/away?to=http://gorodsreda.ru/"
+                   class="slide d-flex align-items-center justify-content-around pr-4">
+                    <div class="background-white rounded-circle d-flex mr-3 flex-column align-items-center justify-content-center">
+                        <img src="/images/gorodsreda-logo-active.png" height="45" alt="">
+                    </div>
+                    <span class="f-14 fw-300 lh-16">Комфортная городская среда и ЖКХ</span>
+                </a>
+                <a href="/away?to=futurerussia.gov.ru/zhile-i-gorodskaya-sreda"
+                   class="slide d-flex align-items-center justify-content-around pr-4">
+                    <div class="background-white rounded-circle d-flex mr-3 flex-column align-items-center justify-content-center">
+                        <img src="/images/naz-projects-active.png" alt="">
+                    </div>
+                    <span class="f-14 fw-300 lh-16">Все материалы национального проекта "Жилье и городская среда"</span>
+                </a>
+                <a href="/away?to=fondgkh.ru"
+                   class="slide d-flex align-items-center justify-content-around pr-4">
+                    <div class="background-white rounded-circle d-flex mr-3 flex-column align-items-center justify-content-center">
+                        <img src="/images/partner-logo8-active.png" alt="">
+                    </div>
+                    <span class="f-14 fw-300 lh-16">ГК-Фонд содействия реформированию ЖКХ</span>
+                </a>
+                <a href="/away?to=http://vokrugjeka.ru/"
+                   class="slide d-flex align-items-center justify-content-around pr-4">
+                    <div class="background-white rounded-circle d-flex mr-3 flex-column align-items-center justify-content-center">
+                        <img src="/images/vokrug-hover.png" alt="">
+                    </div>
+                    <span class="f-14 fw-300 lh-16">Вокруг ЖэКа: Журнал про жизнь и для жизни</span>
+                </a>
+                <a href="/away?to=http://www.nbpo.ru/"
+                   class="slide d-flex align-items-center justify-content-around pr-4">
+                    <div class="background-white rounded-circle d-flex mr-3 flex-column align-items-center justify-content-center">
+                        <img src="/images/util-active-logo.png" alt="">
+                    </div>
+                    <span class="f-14 fw-300 lh-16">Национальное бюро по переработке отходов</span>
+                </a>
+                <a href="/away?to=http://www.nbpo.ru/"
+                   class="slide d-flex align-items-center justify-content-around pr-4">
+                    <div class="background-white rounded-circle d-flex mr-3 flex-column align-items-center justify-content-center">
+                        <img src="/images/swalki-active-logo.png" alt="">
+                    </div>
+                    <span class="f-14 fw-300 lh-16">SVALKI.NET портал об обращении с отходами</span>
+                </a>
+                <a href="/away?to=rusenergyweek.com"
+                   class="slide d-flex align-items-center justify-content-around pr-4">
+                    <div class="background-white rounded-circle d-flex mr-3 flex-column align-items-center justify-content-center">
+                        <img src="/images/energy-week-active-logo.png" alt="">
+                    </div>
+                    <span class="f-14 fw-300 lh-16">Российская энергетическая неделя</span>
+                </a>
+            </div>
+        </div>
+    </section>
+    <footer class="background-dark-blue pb-5 no_print">
+        <div class="container">
+            <div class="container">
+                <div class="row border-bottom-white d-flex align-items-center py-5">
+                    <div class="col-8 px-0">
+                        <a href="/" class="din-text logo text-white d-flex">
+                            <img src="/img/icons/logo-white.svg" class="ml-4"> Реформа ЖКХ
+                        </a>
+                    </div>
+                    <div class="col-4">
+                        <div class="">
+                            <a href="tel:88007008989"
+                               class="f-18 phone-white-fill text-decoration-none text-white font-weight-bold ml-2">8 800
+                                700-89-89</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="row mt-3">
+                    <div class="col-5 d-flex flex-wrap mh-300 flex-row px-0">
+                        <div class="col-6 d-flex flex-column px-0">
+                            <a href="/overhaul" class="text-white f-12 lh-16 text-uppercase mb-4 d-block">КАПИТАЛЬНЫЙ
+                                РЕМОНТ
+                                МКД</a>
+                            <a href="/relocation-about"
+                               class="text-white f-12 lh-16 text-uppercase mb-3 d-block">Расселение аварийного жилья</a>
+                            <span class="d-block pl-2 mb-3">
+								<a href="/relocation-about" class="d-block mb-3 text-footer-blue f-12">О федеральном проекте</a>
+								<a href="/relocation/programs" class="d-block mb-3 text-footer-blue f-12">Программы субъектов РФ</a>
+                                <a href="/relocation/programs-realisation" class="d-block mb-3 text-footer-blue f-12">Ход реализации программ</a>
+								<a href="/relocation/programs/houses" class="d-block mb-3 text-footer-blue f-12">Аварийный фонд</a>
+                                <a href="/relocation-about/faq" class="d-block mb-3 text-footer-blue f-12">Типовые вопросы граждан</a>
+                                <a href="/relocation/quality-control-houses" class="d-block mb-3 text-footer-blue f-12">Контроль качества домов</a>
+                                <a href="/relocation/violators" class="d-block mb-3 text-footer-blue f-12">Нарушители</a>
+							</span>
+                        </div>
+                        <div class="col-6 d-flex flex-column pl-5">
+                            <a href="/myhouse" class="text-white f-12 lh-16 text-uppercase mb-4 d-block">ЖИЛИЩНЫЙ
+                                ФОНД</a>
+                            <a href="https://exp.reformagkh.ru"
+                               class="text-white f-12 lh-16 text-uppercase">МОДЕРНИЗАЦИЯ
+                                ЖИЛЬЯ</a>
+                            <span class="d-block pl-2 mt-3 mb-2">
+								<a href="https://exp.reformagkh.ru"
+                                   class="d-block mb-3 text-footer-blue f-12">Главная</a>
+								<a href="https://exp.reformagkh.ru/educational-materials"
+                                   class="d-block mb-3 text-footer-blue f-12">Программа обучения</a>
+								<a href="https://exp.reformagkh.ru/tests"
+                                   class="d-block mb-3 text-footer-blue f-12">Тесты</a>
+								<a href="https://exp.reformagkh.ru/experts"
+                                   class="d-block mb-3 text-footer-blue f-12">Эксперты</a>
+								<a href="https://exp.reformagkh.ru/projects"
+                                   class="d-block mb-3 text-footer-blue f-12">Проекты</a>
+							</span>
+                            <a href="/communal-infrastructure"
+                               class="text-white f-12 lh-16 text-uppercase mb-2 d-block">Коммунальная
+                                <br>инфраструктура</a>
+                        </div>
+                    </div>
+                    <div class="col-3 d-flex flex-wrap pl-4">
+                        <div class="row">
+                            <a href="/about" class="f-12 lh-16 text-white col-12 col-xl-6">О проекте</a>
+                            <a href="/opendata" class="f-12 lh-16 text-white col-12 col-xl-6">Открытые
+                                данные</a>
+                            <a href="/condition" class="f-12 lh-16 text-white col-12 col-xl-6">Условия</a>
+                            <a href="/help" class="f-12 lh-16 text-white col-12 col-xl-6">Справка</a>
+                            <a href="/api" class="f-12 lh-16 text-white col-12 col-xl-6">Интеграция</a>
+                            <a href="/analytics" class="f-12 lh-16 text-white col-12 col-xl-6">Аналитика</a>
+                            <a href="http://webinar.reformagkh.ru" target="_blank" class="f-12 lh-16 text-white col-12 col-xl-6">Вебинары</a>
+
+                        </div>
+                        <div class="row align-items-center mt-3 align-self-end">
+                            <div>
+                                <!-- Yandex.Metrika informer -->
+                                <a href="https://metrika.yandex.ru/stat/?id=25306409&amp;from=informer"
+                                   target="_blank" rel="nofollow"><img src="https://informer.yandex.ru/informer/25306409/3_1_FFFFFFFF_EFEFEFFF_0_pageviews"
+                                                                       style="width:88px; height:31px; border:0;" alt="Яндекс.Метрика" title="Яндекс.Метрика: данные за сегодня (просмотры, визиты и уникальные посетители)" class="ym-advanced-informer" data-cid="25306409" data-lang="ru" /></a>
+                                <!-- /Yandex.Metrika informer -->
+
+                                <!-- Yandex.Metrika counter -->
+                                <script type="text/javascript" >
+                                    (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+                                        m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+                                    (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+
+                                    ym(25306409, "init", {
+                                        clickmap:true,
+                                        trackLinks:true,
+                                        accurateTrackBounce:true,
+                                        webvisor:true
+                                    });
+                                </script>
+                                <noscript><div><img src="https://mc.yandex.ru/watch/25306409" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+                                <!-- /Yandex.Metrika counter -->
+                                <br>
+                            </div>
+
+                            <span class="ml-3 f-12 lh-16 text-white">Вы <b
+                                        class="f-12 lh-16 text-white">35 070 873</b> посетитель</span>
+                        </div>
+                    </div>
+                    <div class="col-4 pl-4">
+                        <div class="d-flex align-items-start mb-5">
+                            <img src="/img/icons/marker.svg" alt="" class="mr-3 mt-2">
+                            <div>
+                                <span class="f-14 lh-19 text-white d-block mw-300 lh-23 mb-2">115088, г. Москва,<br> ул. Шарикоподшипниковская, д. 5</span>
+                                <span class="f-14 lh-19 text-footer-blue footer-no-hover">Почтовый адрес</span>
+                            </div>
+                        </div>
+                        <div class="d-flex align-items-start">
+                            <img src="/img/icons/mail-white.svg" alt="" class="mr-3 mt-2">
+                            <div>
+                                <a class="f-14 lh-19 text-white d-block mw-300 lh-23 mb-2"
+                                   href="mailto:support@reformagkh.ru">support@reformagkh.ru</a>
+                                <span class="f-14 lh-19 text-footer-blue footer-no-hover">Техническая поддержка</span>
+                            </div>
+                        </div>
+                        <a href="https://play.google.com/store/apps/details?id=ru.reformagkh&hl=ru"
+                           class="d-inline-block"><img
+                                    src="/img/icons/google-play-big.svg" alt="" class="d-inline-block mt-5 mr-4"></a>
+                        <a href="https://itunes.apple.com/ru/app/%D1%80%D0%B5%D1%84%D0%BE%D1%80%D0%BC%D0%B0-%D0%B6%D0%BA%D1%85/id1211145624?l=en&mt=8"
+                           class="d-inline-block"><img
+                                    src="/img/icons/app-store-big.svg" alt="" class="d-inline-block mt-5"></a>
+                    </div>
+                </div>
+                <div class="row mt-5">
+                    <span class="col-12 f-12 fw-300 text-white px-0">© 2007-2021 Государственная корпорация — Фонд содействия реформированию жилищно - коммунального хозяйства</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+            <div class="modal fade" id="login-popup" tabindex="-1" role="dialog" aria-labelledby="login-popup" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content br-8 overflow-hidden">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M12 10.586L16.0069 6.57908C16.5276 6.05838 17.2663 5.95285 17.6569 6.34338C18.0474 6.7339 17.9419 7.47259 17.4212 7.99329L13.4142 12.0002L17.4212 16.0072C17.9419 16.5279 18.0474 17.2666 17.6569 17.6571C17.2663 18.0476 16.5276 17.9421 16.0069 17.4214L12 13.4144L7.99306 17.4214C7.47236 17.9421 6.73367 18.0476 6.34315 17.6571C5.95262 17.2666 6.05815 16.5279 6.57885 16.0072L10.5858 12.0002L6.57885 7.99329C6.05815 7.47259 5.95262 6.7339 6.34315 6.34338C6.73367 5.95285 7.47236 6.05838 7.99306 6.57908L12 10.586Z" fill="black"/>
+                </svg>                  
+            </button>
+            <ul class="nav nav-tabs px-5 pt-5 pb-4 mx-4 my-3" id="myTab" role="tablist">
+                <li class="nav-item pr-5 login-tab  pl-3 mt-2">
+                    <a class="nav-link active lh-32  f-28 p-0" id="login-tab" data-toggle="tab" href="#login" role="tab" aria-controls="login" aria-selected="true">Вход</a>
+                </li>
+                <li class="nav-item  mt-2">
+                    <a class="nav-link pl-5 lh-32  f-28 p-0" id="register-tab" data-toggle="tab" href="#register" role="tab" aria-controls="register" aria-selected="false">Регистрация</a>
+                </li>
+            </ul>
+            <div class="tab-content background-grey p-5" id="myTabContent">
+                <div class="tab-pane fade show active mx-4" id="login" role="tabpanel" aria-labelledby="login-tab">
+                    <form action="/user/login" method="POST" class="login-form">
+                        <div class="form-group mb-4 pb-3">
+                            <input type="text" class="form-control form-control-lg" name="identity" required aria-describedby="emailHelp" placeholder="Логин (E-mail)">
+                            <div class="invalid-feedback"></div>
+                        </div>
+                        <div class="custom-password-control form-group mb-0 pb-3">
+                            <input type="password" class="form-control form-control-lg" name="credential" required placeholder="Пароль">
+                            <i class="icon-show-password"></i>
+                        </div>
+                        <div class="form-group mb-4 text-right">
+                            <a href="#foget-pass" data-toggle="modal">Забыли пароль?</a>
+                        </div>
+                        <div class="text-center">
+                            <button type="submit" class="px-5 py-3 br-8 btn btn-primary text-uppercase f-18 lh-20">ВОЙТИ</button>
+                        </div>
+                    </form>
+                </div>
+                <div class="tab-pane fade mx-4" id="register" role="tabpanel" aria-labelledby="register-tab">
+                    <span class="d-block mb-5 font-weight-bold f-18 lh-20">Внимание!</span>
+                    <span class="d-block my-5 f-14 lh-22">При регистрации на портале «Реформа ЖКХ» Вы создаете учетную запись пользователя. Для регистрации организации с целью раскрытия информации, после подтверждения регистрации как пользователя, Вам необходимо будет подать заявку на регистрацию организации в Личном кабинете пользователя.</span><br>
+                    <form class="my-3 pt-1 login-form" data-type="register" action="/user/register" method="POST">
+                        <div class="form-group">
+                            <label for="login">Ваш логин <sup>
+                                <svg width="10" height="9" viewBox="0 0 10 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M5.77441 0.324219L5.39648 3.7959L8.89453 2.82031L9.12305 4.41992L5.77441 4.69238L7.9541 7.55762L6.44238 8.38379L4.89551 5.20215L3.48926 8.38379L1.94238 7.55762L4.06934 4.69238L0.755859 4.41992L1.01074 2.82031L4.44727 3.7959L4.06934 0.324219H5.77441Z" fill="#FC0909"/>
+                                </svg>
+                            </sup></label>
+                            <input type="text" name="username" class="form-control form-control-lg" placeholder="Логин">
+                            <div class="invalid-feedback"></div>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Адрес электронной почты  <sup>
+                                <svg width="10" height="9" viewBox="0 0 10 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M5.77441 0.324219L5.39648 3.7959L8.89453 2.82031L9.12305 4.41992L5.77441 4.69238L7.9541 7.55762L6.44238 8.38379L4.89551 5.20215L3.48926 8.38379L1.94238 7.55762L4.06934 4.69238L0.755859 4.41992L1.01074 2.82031L4.44727 3.7959L4.06934 0.324219H5.77441Z" fill="#FC0909"/>
+                                </svg>
+                            </sup></label>
+                            <input type="email" name="email" class="form-control form-control-lg" id="email" placeholder="Email">
+                            <div class="invalid-feedback"></div>
+                        </div>
+                        <div class="form-group">
+                            <label for="login">Полное имя (ФИО)   <sup>
+                                <svg width="10" height="9" viewBox="0 0 10 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M5.77441 0.324219L5.39648 3.7959L8.89453 2.82031L9.12305 4.41992L5.77441 4.69238L7.9541 7.55762L6.44238 8.38379L4.89551 5.20215L3.48926 8.38379L1.94238 7.55762L4.06934 4.69238L0.755859 4.41992L1.01074 2.82031L4.44727 3.7959L4.06934 0.324219H5.77441Z" fill="#FC0909"/>
+                                </svg>
+                            </sup></label>
+                            <input type="text" name="display_name" class="form-control form-control-lg" placeholder="Полное имя">
+                            <div class="invalid-feedback"></div>
+                        </div>
+                        <div class="form-group">
+                            <label for="Password1">Пароль<sup>
+                                <svg width="10" height="9" viewBox="0 0 10 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M5.77441 0.324219L5.39648 3.7959L8.89453 2.82031L9.12305 4.41992L5.77441 4.69238L7.9541 7.55762L6.44238 8.38379L4.89551 5.20215L3.48926 8.38379L1.94238 7.55762L4.06934 4.69238L0.755859 4.41992L1.01074 2.82031L4.44727 3.7959L4.06934 0.324219H5.77441Z" fill="#FC0909"/>
+                                </svg>
+                            </sup> </label>
+                            <input type="password" name="password" class="form-control form-control-lg" id="Password1" placeholder="Введите Пароль">
+                            <div class="invalid-feedback"></div>
+                        </div> 
+                        <div class="form-group">
+                            <input type="password" name="passwordVerify" class="form-control form-control-lg" id="Password2" placeholder="Повторите пароль">
+                            <div class="invalid-feedback"></div>
+                        </div>
+                        <div class="form-group row">
+                                                            <div class="col-md-5">
+    <img src="/captcha/2675bd9a6e52f707a7daa6c8d0ed5f1e.png"
+         width="160" height="80" alt=""/>
+</div>
+<div class="col-md-7">
+    <input name="captcha" type="hidden" value="">
+    <input name="captcha[id]" type="hidden" value="2675bd9a6e52f707a7daa6c8d0ed5f1e">
+    <input type="text" class="form-control form-control-lg" name="captcha[input]">
+    <div class="invalid-feedback"></div>
+    <a href="#" class="text-decoration-none link new-captcha">
+        <svg width="14" height="16" viewBox="0 0 14 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" clip-rule="evenodd"
+                  d="M6.59614 2.0113L6.29312 1.70831C5.90247 1.31769 5.90227 0.684166 6.29266 0.293291C6.68306 -0.0975835 7.31622 -0.09779 7.70688 0.29283L9.70688 2.29267C10.0977 2.68347 10.0977 3.31735 9.70688 3.70815L7.70688 5.70799C7.31622 6.09861 6.68306 6.0984 6.29266 5.70752C5.90227 5.31665 5.90247 4.68312 6.29312 4.2925L6.5661 4.01955C4.0083 4.23954 2 6.38607 2 8.99992C2 11.7599 4.23914 13.9989 7 13.9989C9.76086 13.9989 12 11.7599 12 8.99992C12 8.44732 12.4477 7.99935 13 7.99935C13.5523 7.99935 14 8.44732 14 8.99992C14 12.8654 10.8651 16 7 16C3.13486 16 0 12.8654 0 8.99992C0 5.27001 2.91883 2.2206 6.59614 2.0113Z"
+                  fill="#1D81D0"/>
+        </svg>
+        <span>другую картинку</span>
+    </a>
+</div>                                                    </div>
+                        <button type="submit" class="px-5 py-3 br-8 btn btn-primary text-uppercase f-18 lh-20 mx-auto d-flex mb-5">ЗАРЕГИСТРИРОВАТЬСЯ</button>
+                        <p>После регистрации на ваш e-mail адрес будет отправлено письмо с инструкциями по активации пользователя.</p>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade login-form" id="foget-pass" tabindex="-1" role="dialog" aria-labelledby="login-popup" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content br-8 overflow-hidden">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M12 10.586L16.0069 6.57908C16.5276 6.05838 17.2663 5.95285 17.6569 6.34338C18.0474 6.7339 17.9419 7.47259 17.4212 7.99329L13.4142 12.0002L17.4212 16.0072C17.9419 16.5279 18.0474 17.2666 17.6569 17.6571C17.2663 18.0476 16.5276 17.9421 16.0069 17.4214L12 13.4144L7.99306 17.4214C7.47236 17.9421 6.73367 18.0476 6.34315 17.6571C5.95262 17.2666 6.05815 16.5279 6.57885 16.0072L10.5858 12.0002L6.57885 7.99329C6.05815 7.47259 5.95262 6.7339 6.34315 6.34338C6.73367 5.95285 7.47236 6.05838 7.99306 6.57908L12 10.586Z" fill="black"/>
+                </svg>                  
+            </button>
+            <div class="px-5 py-4 mx-4 my-3" >
+                <h3 class="fw-600 pr-5 pl-3 mt-2">
+                    Забыли пароль
+                </h3>
+                
+            </div>
+            <div class=" background-grey p-5">
+                <form action="/user/recoverpassword" class="login-form" data-type="recover" method="POST">
+                    <div class="form-group mb-4 pb-3 px-5">
+                        <label>Введите e-mail, чтобы начать операцию<br>по восстановлению пароля:</label>
+                        <input type="email" name="email" class="form-control form-control-lg" required aria-describedby="emailHelp" placeholder="E-mail">
+                        <input type="hidden" name="send" value="true">
+                        <div class="invalid-feedback"></div>
+                    </div>
+                    
+                    <div class="w-100 text-center border-none">
+                        <button type="submit" class="px-5 py-3 br-8 btn btn-primary text-uppercase f-18 lh-20"> ВОССТАНОВИТЬ ПАРОЛЬ </button>
+                    </div>
+                </form>
+                
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal fade login-form" id="print-mail" tabindex="-1" role="dialog" aria-labelledby="print-popup" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content br-8 overflow-hidden">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M12 10.586L16.0069 6.57908C16.5276 6.05838 17.2663 5.95285 17.6569 6.34338C18.0474 6.7339 17.9419 7.47259 17.4212 7.99329L13.4142 12.0002L17.4212 16.0072C17.9419 16.5279 18.0474 17.2666 17.6569 17.6571C17.2663 18.0476 16.5276 17.9421 16.0069 17.4214L12 13.4144L7.99306 17.4214C7.47236 17.9421 6.73367 18.0476 6.34315 17.6571C5.95262 17.2666 6.05815 16.5279 6.57885 16.0072L10.5858 12.0002L6.57885 7.99329C6.05815 7.47259 5.95262 6.7339 6.34315 6.34338C6.73367 5.95285 7.47236 6.05838 7.99306 6.57908L12 10.586Z" fill="black"/>
+                </svg>
+            </button>
+            <div class="px-5 py-4 mx-4 my-3" >
+                <h3 class="fw-600 pr-5 pl-3 mt-2">
+                    Запрос на формирование файла
+                </h3>
+
+            </div>
+            <div class=" background-grey p-5">
+                <form action="/print-queue" id="post_report_form2" class="login-form" method="POST">
+                    <div class="form-group mb-4 pb-3 px-5">
+                        <label class="mb-80">Сформированный файл будет направлен на указанный
+                            Вами e-mail в течение 30 минут</label>
+                        <input type="text" name="email" class="form-control form-control-lg ui-autocomplete-input" required aria-describedby="emailHelp" placeholder="E-mail" maxlength="128" autocomplete="off">
+                        <input type="hidden" name="send" value="true">
+                        <div class="invalid-feedback"></div>
+                    </div>
+                    <div>
+                            <div class="control_row captcha hide">
+        <div class="control">
+            <input name="captcha[id]" type="hidden" value="">
+            <input name="captcha[input]" type="text">
+            <input name="csrf" type="hidden" value="">
+            <a id="reload-captcha" href="javascript:void(0)">
+                <i class="ico reload"></i>
+                <span>другую картинку</span>
+            </a>
+        </div>
+    </div>
+                    </div>
+
+                    <div class="w-100 text-center border-none">
+                        <button type="submit" class="px-5 py-3 br-8 btn btn-primary text-uppercase f-18 lh-20"> ОТПРАВИТЬ </button>
+                    </div>
+                </form>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+    
+    <div class="modal fade" id="post_report_form" tabindex="-1" role="dialog" aria-labelledby="post-report-form" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content br-8 overflow-hidden">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M12 10.586L16.0069 6.57908C16.5276 6.05838 17.2663 5.95285 17.6569 6.34338C18.0474 6.7339 17.9419 7.47259 17.4212 7.99329L13.4142 12.0002L17.4212 16.0072C17.9419 16.5279 18.0474 17.2666 17.6569 17.6571C17.2663 18.0476 16.5276 17.9421 16.0069 17.4214L12 13.4144L7.99306 17.4214C7.47236 17.9421 6.73367 18.0476 6.34315 17.6571C5.95262 17.2666 6.05815 16.5279 6.57885 16.0072L10.5858 12.0002L6.57885 7.99329C6.05815 7.47259 5.95262 6.7339 6.34315 6.34338C6.73367 5.95285 7.47236 6.05838 7.99306 6.57908L12 10.586Z" fill="black"/>
+                </svg>
+            </button>
+
+            <div class="popup-content">
+                <div class="header-lined">Запрос на формирование файла</div>
+                <div id="window1" class="show">
+                                        <form action="/print-forms/send-to-email" method="post" id="print" style="display: initial">
+                        <input type="hidden" name="id" value="10601233">
+
+                        
+                        <div class="form-group mb-4 px-5 pb-3">
+                            <input type="email" class="form-control form-control-lg" maxlength="128" autocomplete="off" name="email" required="" aria-describedby="emailHelp" placeholder="E-mail" value="">
+                        </div>
+
+                        <div class="form-group mb-4 px-5 pb-3">
+
+    <label class="radio-new form-check form-check-label">
+        Данные по управлению МКД (в рамках 731-ПП РФ)
+        <input type="radio" name="reportType" value="mkd-profile" checked>
+        <span class="checkround"></span>
+    </label>
+
+    <label class="radio-new form-check form-check-label">
+        Выписка из реестра АЖФ (в рамках Приказа Минстроя России от 30.07.2015 г. №536/пр)
+        <input type="radio" name="reportType" value="mkd-ajf-after-2012-statement" >
+        <span class="checkround"></span>
+    </label>
+
+</div>
+
+                        <div>
+                                <div class="control_row captcha hide">
+        <div class="control">
+            <input name="captcha[id]" type="hidden" value="">
+            <input name="captcha[input]" type="text">
+            <input name="csrf" type="hidden" value="">
+            <a id="reload-captcha" href="javascript:void(0)">
+                <i class="ico reload"></i>
+                <span>другую картинку</span>
+            </a>
+        </div>
+    </div>
+                        </div>
+                        <div class="w-100 text-center border-none">
+                            <button type="submit" class="px-5 py-3 br-8 btn btn-primary text-uppercase f-18 lh-20">Отправить</button>
+                        </div>
+                    </form>
+                    
+                    <div class="nota mt-3">
+                        <p class="bold">Внимание!</p>
+                        <p>Сформированный файл будет направлен на указанный
+                            Вами e-mail в течение 30 минут</p>
+                    </div>
+                </div>
+                <div class="form-group mb-4 pb-3 px-5">
+                    <div id="error" class="invalid-feedback"></div>
+                </div>
+                <div id="window2" class="hide mb-4">
+                    <div class="w-100 text-center border-none">
+                        <button type="submit" class="px-5 py-3 br-8 btn btn-primary text-uppercase f-18 lh-20" data-dismiss="modal" aria-label="Close">Закрыть</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+    <div class="modal fade" id="address-changes-popup" tabindex="-1" role="dialog" aria-labelledby="address-changes-popup" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content br-8 overflow-hidden">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M12 10.586L16.0069 6.57908C16.5276 6.05838 17.2663 5.95285 17.6569 6.34338C18.0474 6.7339 17.9419 7.47259 17.4212 7.99329L13.4142 12.0002L17.4212 16.0072C17.9419 16.5279 18.0474 17.2666 17.6569 17.6571C17.2663 18.0476 16.5276 17.9421 16.0069 17.4214L12 13.4144L7.99306 17.4214C7.47236 17.9421 6.73367 18.0476 6.34315 17.6571C5.95262 17.2666 6.05815 16.5279 6.57885 16.0072L10.5858 12.0002L6.57885 7.99329C6.05815 7.47259 5.95262 6.7339 6.34315 6.34338C6.73367 5.95285 7.47236 6.05838 7.99306 6.57908L12 10.586Z" fill="black"/>
+                </svg>
+            </button>
+
+            <div class="popup-content">
+                <div class="header-lined">История изменения адреса дома</div>
+                <ul class="changes">
+                                            <li>
+                            <div class="address">г. Санкт-Петербург, ул. Стойкости, д. 7</div>
+                            <div class="date">с 11.01.2012
+                                по настоящее время</div>
+                        </li>
+                                    </ul>
+
+                <div class="nota">
+                    <p class="bold">Внимание!</p>
+                    <p>Указанные сведения отражают факт изменения адреса в системе</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>    <div class="modal_wrap" id="modal-email-subscribe">
+    <div class="modal">
+        <div class="modal_title">Вы действительно хотите получать уведомления о смене статуса Заявки?<span class="ico close fr"></span></div>
+        <div class="modal_body">
+            <form action="/myhouse/subscribeFinRequest" accept-charset="UTF-8" method="post" name="subscribe-fin-request-form">
+                <div class="f justify-content-center">
+                    <input type="hidden" name="finRequestExpertId" value="" />
+                    <input type="submit" class="btn btn-success" value="Подтверждаю">
+                </div>
+            </form>
+        </div>
+    </div>
+</div>    <div class="modal fade" id="settlement-popup" tabindex="-1" role="dialog" aria-labelledby="settlement-popup"
+     aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content br-8 overflow-hidden">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                          d="M12 10.586L16.0069 6.57908C16.5276 6.05838 17.2663 5.95285 17.6569 6.34338C18.0474 6.7339 17.9419 7.47259 17.4212 7.99329L13.4142 12.0002L17.4212 16.0072C17.9419 16.5279 18.0474 17.2666 17.6569 17.6571C17.2663 18.0476 16.5276 17.9421 16.0069 17.4214L12 13.4144L7.99306 17.4214C7.47236 17.9421 6.73367 18.0476 6.34315 17.6571C5.95262 17.2666 6.05815 16.5279 6.57885 16.0072L10.5858 12.0002L6.57885 7.99329C6.05815 7.47259 5.95262 6.7339 6.34315 6.34338C6.73367 5.95285 7.47236 6.05838 7.99306 6.57908L12 10.586Z"
+                          fill="black"/>
+                </svg>
+            </button>
+
+            <div class="popup-content">
+                <div class="header-lined">Энергоэффективный капитальный ремонт</div>
+
+                <div class="padded">
+                    <table class="info-table" cellspacing="0" cellpadding="0">
+                        <tbody>
+                        <tr>
+                            <td class="label">Адрес дома:</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td class="label">Предварительно рассчитанная сумма поддержки:</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td class="label">Прогнозный показатель экономии:</td>
+                            <td></td>
+                        </tr>
+                        </tbody>
+                    </table>
+
+                    <div class="obr">
+                        <p class="text-center">Уважаемые пользователи!</p>
+                        <p>Информируем вас, что по вашему многоквартирному дому был произведен предварительный расчет
+                            потенциала экономии за счет проведения капитального ремонта с выполнением мероприятий по
+                            энергосбережению и повышению энергоэффективности.</p>
+                    </div>
+
+                    <div class="btn-line">
+                                                <button>Открыть расчет</button>
+                                                    <button>Авторство</button>
+                                                <button class="getPdf" data-host="" data-id=">Скачать pdf</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div></body>
+</html>
