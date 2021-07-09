@@ -67,6 +67,7 @@ class AddressService(Address):
             return
 
         dest_id = DestAddress.query.insert(**info)
+        print(info)
         DestAddress.query.save()
         self.dest_id = dest_id
         Address.query.update(self)
@@ -75,6 +76,8 @@ class AddressService(Address):
 
 def analysis():
     objects = list(map(Address, Address.query.all()))
+    for object in objects:
+        print(object.dest_address)
     print("Общее кол-во объектов", len(objects))
     print("Кол-во найденных и ненайденных объектов:")
     print(Address.query.count_found_not_found())
@@ -85,9 +88,9 @@ def analysis():
 
 
 if __name__ == "__main__":
-    parser = AddressParserAdapter(SimpleSearch)
-    for address_query in Address.query.all():
-        address = AddressService(parser, address_query)
-        address.process()
+    # parser = AddressParserAdapter(SimpleSearch)
+    # for address_query in Address.query.all():
+    #     address = AddressService(parser, address_query)
+    #     address.process()
 
     analysis()

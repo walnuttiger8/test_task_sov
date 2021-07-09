@@ -56,6 +56,8 @@ class SimpleSearch(Search):
             if response.status_code == 403:
                 raise CaptchaRequestedException("Требуется ввод капчи " + response.url)
             raise SessionExpiredException("Недействительная сессия")
+        if response.text == "Превышено количество показов Каптча":
+            raise CaptchaRequestedException("Капча заблокирована")
         soup = Bs(response.content, "html.parser")
         return self.get_links(soup)
 
