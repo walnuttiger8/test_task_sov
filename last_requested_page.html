@@ -1,23 +1,55 @@
-<script lang="text/javascript">
-    var checkKey = 'be8a264bc7132c6c3d8f7b0ca7a5b425',
-        key1 = 'c497d21a3eae3ca1f7914e71ac74fb9454e98e0834acbcecc840',
-        val1 = Number('1723985146'),
-        key2 = 'c497d21a3eae3ca1f7914e71ac74fb94ecf5c381fb175862d0c4',
-        val2 = Number('203996552');
-
-    var xhrRequest = new XMLHttpRequest();
-
-    xhrRequest.open('POST', '/save-check-data');
-    xhrRequest.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
-    xhrRequest.setRequestHeader('X-Requested-With', 'XMLHttpRequest');
-    xhrRequest.onload = function () {
-        var response = JSON.parse(xhrRequest.responseText || '{}');
-
-        if (xhrRequest.status === 200 && !!response.success) {
-            window.location.reload();
-        } else {
-            window.location.href = '/';
+<!DOCTYPE html><head>
+    <meta name="charset" content="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">    <link href="/images/favicon.ico" rel="shortcut icon" type="image/x-icon">
+    <script type="text/javascript" src="//cdn.ravenjs.com/3.8.0/raven.min.js"></script>
+<script type="text/javascript">
+    //<!--
+    Raven.config('http://d11c780c612845c5a069fba7b148d064@sentry.bars-open.ru/169').install()
+    //-->
+</script>    <link href="/images/favicon.ico" rel="shortcut icon" type="image/x-icon">    
+    <title>Реформа ЖКХ</title>    <style>
+        html, body {
+            height: 100%;
         }
-    };
-    xhrRequest.send(encodeURI('key1=' + key1 + '&key2=' + key2 + '&check-key=' + checkKey + '&check-value=' + (val1 + val2)));
-</script>
+
+        html {
+            display: table;
+            margin: auto;
+        }
+
+        body {
+            display: table-cell;
+            vertical-align: middle;
+        }
+
+    </style>
+
+</head>
+<body>
+
+<form method="post" name="request_limiter_captcha" action="&#x2F;captcha-form" id="request_limiter_captcha"><input type="hidden" name="redirectTo" value=""><input type="hidden" name="csrf" value="d2997221ec59c906f4554bafdca570e9-23874b0ac2ef85342204b332a3c1dd0b"><span>В целях безопасности введите код с картинки</span>
+<table>
+    <tr>
+        <td>
+            <img width="160" height="80"
+                 src="/captcha/3ee33e8f5bb8ee6caa779b78428df23f.png"
+                 alt="">
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <input type="text" name="captcha[input]" id="captchaInput"/>
+            <input type="hidden" value="3ee33e8f5bb8ee6caa779b78428df23f" name="captcha[id]"/>
+                    </td>
+    </tr>
+    <tr>
+        <td>
+            <input name="submit" type="submit" value="&#x0412;&#x0432;&#x043E;&#x0434;"> <input type="button"
+                                                                                                       onclick="window.location.reload()"
+                                                                                                       value="Обновить рисунок"/>
+        </td>
+    </tr>
+</table>
+</form></body>

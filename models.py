@@ -194,11 +194,17 @@ class AddressQuery:
         command = f"""
         UPDATE {AddressQuery.table_name}
         SET source_id = {address.source_id},
-        dest_id = {address.dest_id},
+        dest_id = {address.dest_id or 'NULL'},
         n_tries = {address.n_tries}
         WHERE id = {address.id}
         """
         return self.cursor.execute(command)
+
+    def delete(self, address):
+        command = f"""
+        DELETE FROM {AddressQuery.table_name}
+        WHERE id = {address.id}
+        """
 
 
 class Address:
@@ -242,4 +248,7 @@ def drop_all():
     DestAddress.query._drop()
     Address.query._drop()
 
+
+if __name__ == "__main__":
+    fill_db()
 

@@ -9,6 +9,9 @@ from abc import abstractmethod
 class SessionExpiredException(Exception):
     pass
 
+class CaptchaRequestedException(Exception):
+    pass
+
 
 class Search:
     _base_url = "https://www.reformagkh.ru"
@@ -50,6 +53,8 @@ class SimpleSearch(Search):
         }
         response = self.session.get(self.url, params=params, headers=self.headers)
         if response.status_code != 200:
+            if response.status_code == 403:
+                raise CaptchaRequestedException("Требуется ввод капчи " + response.url)
             raise SessionExpiredException("Недействительная сессия")
         soup = Bs(response.content, "html.parser")
         return self.get_links(soup)

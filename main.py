@@ -1,4 +1,4 @@
-from address_parser import AddressParser
+from address_parser import AddressParser, SimpleSearch
 from models import SourceAddress, DestAddress, Address
 
 
@@ -33,7 +33,9 @@ class AddressService(Address):
         if self.dest_id:
             return DestAddress.query.get(self.dest_id)
         self.n_tries += 1
-        links = self.parser.simple_search(self.source_address.__str__())
+        print(self.source_address)
+        links = self.parser.search.search(self.source_address.region, self.source_address.city,
+                                          self.source_address.street, self.source_address.house)
         for link in links:
             if not link.startswith("/myhouse"):
                 continue
@@ -43,10 +45,25 @@ class AddressService(Address):
         return {}
 
     def process(self):
-        if self.n_tries > 3 or self.dest_id:
+        if self.dest_id:
             return
+        if self.n_tries > 3:  # если более 3-х попыток, удаление из поиска
+            Address.query.delete(address)
+            Address.query.save()
         info = self.get_info()
-        if not info:
+        if not info:  # Если результат не найден, вернуть в поиск
+            source_id = SourceAddress.query.insert(region=self.source_address.region,
+                                                   kind_premises=self.source_address.kind_premises,
+                                                   post_code=self.source_address.post_code,
+                                                   type=self.source_address.type, city=self.source_address.city,
+                                                   street_type=self.source_address.street_type,
+                                                   street=self.source_address.street, house=self.source_address.house,
+                                                   block=self.source_address.block,
+                                                   flat=self.source_address.flat)
+            SourceAddress.query.save()
+            self.source_id = source_id
+            Address.query.update(self)
+            Address.query.save()
             return
 
         dest_id = DestAddress.query.insert(**info)
@@ -57,14 +74,7 @@ class AddressService(Address):
 
 
 if __name__ == "__main__":
-    parser = AddressParserAdapter()
+    parser = AddressParserAdapter(SimpleSearch)
     for address_query in Address.query.all():
-        address = Address(address_query)
-        try:
-            links = parser.search.search(address.source_address.region, address.source_address.city,
-                                         address.source_address.street,
-                                         address.source_address.house)
-            print(links)
-        except Exception as e:
-            print(e)
-
+        address = AddressService(parser, address_query)
+        address.process()
