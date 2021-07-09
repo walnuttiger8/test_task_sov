@@ -67,7 +67,6 @@ class AddressService(Address):
             return
 
         dest_id = DestAddress.query.insert(**info)
-        print(info)
         DestAddress.query.save()
         self.dest_id = dest_id
         Address.query.update(self)

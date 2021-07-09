@@ -107,7 +107,6 @@ class DestAddressQuery:
         cadastral_number, overlap_type, wall_material) VALUES ('{year}', '{n_floors}', '{last_changed}', '{building_type}', '{house_type}',
          '{emergency}', '{cadastral_number}', '{overlap_type}', '{wall_material}')
         """
-        print(command)
         self.cursor.execute(command)
         return self.cursor.execute(f"SELECT last_insert_rowid()").fetchone()[0]
 
