@@ -10,6 +10,6 @@ def get_phpsessid() -> {}:
     cookies = driver.get_cookies()
     for cookie in cookies:
         if cookie["name"] == "PHPSESSID":
-            return {cookie["name"]: cookie["value"]}
+            return f"{cookie['name']}={cookie['value']}"
 
-    return {}
+    return ""

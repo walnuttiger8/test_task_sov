@@ -1,5 +1,6 @@
 import requests
 from phpsessid import get_phpsessid
+from headers import headers
 
 
 class ListFiasParser:
@@ -21,13 +22,8 @@ class ListFiasParser:
         self.headers = {
             "X-Requested-With": "XMLHttpRequest",
             "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.106 YaBrowser/21.6.0.616 Yowser/2.5 Safari/537.36",
-            "Cookie": "",
+            "Cookie": headers["Cookie"],
         }
-        self.update_session()
-
-    def update_session(self):
-        sessid = get_phpsessid()
-        self.headers["Cookie"] = f"PHPSESSID={sessid['PHPSESSID']}"
 
     @staticmethod
     def search(list_fias: dict, value: str):
@@ -55,7 +51,7 @@ class ListFiasParser:
         }
         response = self.session.get(url, params=params, headers=self.headers)
         if response.status_code != 200:
-            raise Exception("Сессия недействительна или достигнут лимит запросов")
+            raise Exception("Сессия недействительна или достигнут лимит запросов" + response.text)
         json = response.json()
         if isinstance(json, dict) and json.get("success") == "false":
             return {}

@@ -1,8 +1,7 @@
 from urllib.parse import urlencode, quote_plus
-from phpsessid import get_phpsessid
 import requests
 from bs4 import BeautifulSoup as Bs
-from headers import headers, get_headers
+from headers import headers
 from list_fias_parser import ListFiasParser as Lfp
 from abc import abstractmethod
 
@@ -19,7 +18,7 @@ class Search:
         self.session = session
         self.headers = {
             "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9",
-            "Cookie": "PHPSESSID=ff21195bc0598599e9a2bd287c0e6cf1",
+            "Cookie": headers["Cookie"],
         }
 
     def get_links(self, soup: Bs):
@@ -32,10 +31,6 @@ class Search:
             if a:
                 result.append(a["href"])
         return result
-
-    def update_session(self):
-        sessid = get_phpsessid()
-        self.headers["Cookie"] = f"PHPSESSID={sessid['PHPSESSID']}"
 
     @abstractmethod
     def search(self, region: str, settlement: str, street: str, house: str):
@@ -87,11 +82,10 @@ class AdvancedSearch(Search):
         }
         lfp = Lfp()
         params.update(lfp.get_guids(params))
-        print(params)
         if not params["house-guid"]:
             return []
         response = self.session.post(self.url, data=urlencode(params, quote_via=quote_plus), headers=self.headers)
-        with open('test.html', "wb") as file:
+        with open('last_requested_page.html', "wb") as file:
             file.write(response.content)
         if response.text.startswith("<script") or response.status_code != 200:
             raise SessionExpiredException("Сессия недействительна")
@@ -115,72 +109,6 @@ class AddressParser:
         self.headers = headers
         self.search = search_class(self.session)
 
-    def simple_search(self, query: str) -> list:
-        """
-        Простой поиск.
-        :param query: строка запроса
-        :type query: str
-        :return: список ссылок удовлетворяющих условиям поиска
-        """
-        url = AddressParser._base_url + "/search/houses"
-        params = {
-            "query": query,
-        }
-        response = self.session.get(url, params=params, headers=get_headers)
-        if response.status_code != 200:
-            raise SessionExpiredException("Недействительная сессия")
-        soup = Bs(response.content, "html.parser")
-        with open('test.html', "wb") as file:
-            file.write(response.content)
-        return AddressParser._get_links(soup)
-
-    def advanced_search(self, region: str, settlement: str, district: str = "", street: str = "",
-                        house: str = ""):
-        """
-        Расширенный поиск. Примечание: Расширенный поиск требует указания человеческой сессии напрямую в headers
-        :param region: Регион
-        :param settlement: Поселение
-        :param district: Район
-        :param street: Улица
-        :param house: Дом
-        :return: Список ссылок удовлетворяющих условиям поиска
-        """
-        url = AddressParser._base_url + "/search/houses-advanced"
-        params = {
-            "region": region,
-            "region-guid": "",
-            "district": district,
-            "district-guid": "",
-            "settlement": settlement,
-            "settlement-guid": "",
-            "street": street,
-            "street-guid": "",
-            "house": house,
-            "house-guid": "",
-        }
-        lfp = Lfp()
-        params.update(lfp.get_guids(params))
-        print(params)
-        response = self.session.post(url, data=urlencode(params, quote_via=quote_plus), headers=self.headers)
-        with open('test.html', "wb") as file:
-            file.write(response.content)
-        if response.text.startswith("<script"):
-            raise SessionExpiredException("Сессия недействительна")
-        soup = Bs(response.content, "html.parser")
-        return AddressParser._get_links(soup)
-
-    @staticmethod
-    def _get_links(soup: Bs):
-        table = soup.find("table")
-        if not table:
-            return []
-        result = list()
-        for row in table.find_all("tr"):
-            a = row.find("a")
-            if a:
-                result.append(a["href"])
-        return result
-
     def get_data(self, link: str) -> dict:
         """
         Получает необходимые данные из информации о доме
@@ -189,8 +117,8 @@ class AddressParser:
         """
         url = AddressParser._base_url + link + "#content"
         url = url.replace("view", "passport")
-        response = self.session.get(url, headers=get_headers)
-        with open('test.html', "wb") as file:
+        response = self.session.get(url, headers={"Accept": headers["Accept"]})
+        with open('last_requested_page.html', "wb") as file:
             file.write(response.content)
         soup = Bs(response.content, "html.parser")
         house_table = soup.find("table", attrs={"id": "profile-house-style"})

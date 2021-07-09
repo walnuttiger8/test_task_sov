@@ -56,16 +56,15 @@ class AddressService(Address):
         Address.query.save()
 
 
-# for _ in range(3):
-#     parser = AddressParserAdapter()
-#     for address_query in Address.query.all():
-#         address = AddressService(parser, address_query)
-#         address.process()
 if __name__ == "__main__":
     parser = AddressParserAdapter()
     for address_query in Address.query.all():
         address = Address(address_query)
-        links = parser.search.search(address.source_address.region, address.source_address.city,
-                                     address.source_address.street,
-                                     address.source_address.house)
-        print(links)
+        try:
+            links = parser.search.search(address.source_address.region, address.source_address.city,
+                                         address.source_address.street,
+                                         address.source_address.house)
+            print(links)
+        except Exception as e:
+            print(e)
+

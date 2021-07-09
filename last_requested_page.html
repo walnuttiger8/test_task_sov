@@ -1,0 +1,23 @@
+<script lang="text/javascript">
+    var checkKey = 'be8a264bc7132c6c3d8f7b0ca7a5b425',
+        key1 = 'c497d21a3eae3ca1f7914e71ac74fb9454e98e0834acbcecc840',
+        val1 = Number('1723985146'),
+        key2 = 'c497d21a3eae3ca1f7914e71ac74fb94ecf5c381fb175862d0c4',
+        val2 = Number('203996552');
+
+    var xhrRequest = new XMLHttpRequest();
+
+    xhrRequest.open('POST', '/save-check-data');
+    xhrRequest.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+    xhrRequest.setRequestHeader('X-Requested-With', 'XMLHttpRequest');
+    xhrRequest.onload = function () {
+        var response = JSON.parse(xhrRequest.responseText || '{}');
+
+        if (xhrRequest.status === 200 && !!response.success) {
+            window.location.reload();
+        } else {
+            window.location.href = '/';
+        }
+    };
+    xhrRequest.send(encodeURI('key1=' + key1 + '&key2=' + key2 + '&check-key=' + checkKey + '&check-value=' + (val1 + val2)));
+</script>
